@@ -1,6 +1,6 @@
 # Muar-in-Motion
 
-# INTRODUCTION
+# Introduction
 Muar-in-Motion is a project initiated by The Muara (FG 21), a flagship project under the IIUM Flagship Project. Developed in collaboration between the Kulliyyah of Languages and Management (KLM) and Tanjung Kunang Enterprise, the project aims to promote and enhance the tourism industry in the Muar region [8]. The Muar-in-Motion web application is a vital tool designed to assist in achieving this mission. It serves as an intuitive platform for potential tourists, providing easy access to important information, including details about tourist attractions, transportation options, accommodation, and a seamless communication platform for visitors to connect and plan their trips.
 
 ## Background of the Problem
