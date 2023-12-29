@@ -28,7 +28,7 @@
         font-size: 6vw;
         font-style: normal;
         font-weight: 600;
-        line-height: normal;
+        line-height: normal; 
     }
 
     .banner-desc{
