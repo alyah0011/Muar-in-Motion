@@ -18,6 +18,19 @@
         
     }
 
+    .banner {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for opacity */
+    }
+
     .banner-title{
         position: absolute;
         width: 80%;
@@ -29,6 +42,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        z-index: 1;
     }
 
     .banner-desc{
@@ -146,7 +160,8 @@
     <div class="banner">
         
         @if($event->eve_img)
-        <img src="{{ url('/storage/' . $event->eve_img) }}" alt="Event Image">
+            <div class="overlay"></div>
+            <img src="{{ url('/storage/' . $event->eve_img) }}" alt="Event Image">
         @endif
         
         <h2 class="banner-title">

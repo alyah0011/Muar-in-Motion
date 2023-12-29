@@ -17,6 +17,19 @@
         max-height: 680px;
     }
 
+    .banner {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for opacity */
+    }
+
     .banner-title {
         position: absolute;
         width: 75%;
@@ -28,6 +41,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        z-index: 1;
     }
 
     .banner-desc {
@@ -321,7 +335,8 @@
 <x-app-layout>
     <div class="banner">
         @if($attraction->att_img)
-        <img src="{{ url('/storage/' . $attraction->att_img) }}" alt="Attraction Image">
+            <div class="overlay"></div>
+            <img src="{{ url('/storage/' . $attraction->att_img) }}" alt="Attraction Image">
         @endif
 
         <h2 class="banner-title">
