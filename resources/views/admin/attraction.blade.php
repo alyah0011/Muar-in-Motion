@@ -301,7 +301,7 @@
                             <select class="form-control" id="att_cat" name="att_cat">
                                 <option value="" {{ $attraction->att_cat === '' ? 'selected' : '' }} disabled>Select an option</option>
                                 <option value="Recreational" {{ $attraction->att_cat === 'Recreational' ? 'selected' : '' }}>Recreational</option>
-                                <option value="Food & beverage" {{ $attraction->att_cat === 'Food & Beverage' ? 'selected' : '' }}>Food & Beverage</option>
+                                <option value="Food and beverage" {{ $attraction->att_cat === 'Food and Beverage' ? 'selected' : '' }}>Food and Beverage</option>
                                 <option value="Cultural" {{ $attraction->att_cat === 'Cultural' ? 'selected' : '' }}>Cultural</option>
                                 <option value="Heritage" {{ $attraction->att_cat === 'Heritage' ? 'selected' : '' }}>Heritage</option>
                                 <option value="Shopping" {{ $attraction->att_cat === 'Shopping' ? 'selected' : '' }}>Shopping</option>
