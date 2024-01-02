@@ -22,7 +22,7 @@ class Accomodation extends Model
         'acco_contact',
         'acco_lat',
         'acco_longi',
-        'acco_average_rating', // Add 'average_rating' to the fillable array
+        'acco_average_rating', 
     ];
 
     public function updateAverageRating()

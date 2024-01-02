@@ -4,7 +4,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        max-width: 60%; /* Adjust the maximum width as needed */
+        max-width: 60%; 
         margin: 0 auto;
     }
 
@@ -29,21 +29,21 @@
 
 
     .icon {
-        width: 50px; /* Adjust icon size as needed */
-        height: 50px; /* Adjust icon size as needed */
+        width: 50px; 
+        height: 50px; 
         display: block;
-        margin: 0 auto 10px; /* Adjust margin as needed */
+        margin: 0 auto 10px; 
         transition: transform 0.3s ease;
     }
 
     .rounded-square:hover img , .icon:hover {
-        transform: scale(1.2); /* Adjust the scale factor as needed */
+        transform: scale(1.2); 
     }
 
-    /* Add responsive styles if needed */
+    /* Add responsive styles */
     @media (max-width: 767px) {
         .rounded-square {
-            width: 100%; /* Adjust width as needed for smaller screens */
+            width: 100%; 
         }
     }
 </style>

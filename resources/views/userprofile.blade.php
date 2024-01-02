@@ -10,13 +10,13 @@
             background-color: rgba(0, 0, 0, 0.06);;
             opacity: 100%;
             border-radius: 15px;
-            margin-left: 10%; /* Updated margin for flexibility */
+            margin-left: 10%; 
             z-index: 1;
        }
 
        .col-right{
             width:30%;
-            height: inherit; /* Updated height using viewport height (vh) unit */
+            height: inherit; 
             padding: 20px;
             margin-left: 30px;
             background-color: rgba(0, 0, 0, 0.06);;
@@ -35,33 +35,33 @@
             opacity: 100%;
             border-radius: 15px;
             margin-left: 0px;
-            margin-top: 5vh; /* Updated margin for flexibility */
+            margin-top: 5vh; 
             z-index: 1;
         }
 
        .icon-text {
-            margin-left: 5px; /* Add space between the icon and text */
+            margin-left: 5px; 
             margin-top: 0px;
             padding: 20px;
         }
 
         .icon-button {
-            margin-right: 10px; /* Adjust the margin as needed to create space between the icon and the button */
+            margin-right: 10px; 
         }
 
         .con {
-            margin-top: 5vh; /* Updated margin for flexibility */
-            margin-left: 2vw; /* Updated margin for flexibility */
+            margin-top: 5vh;
+            margin-left: 2vw; 
         }
 
         .transparent-textarea {
-            width: 100%; /* Set your desired width */
-            height: 100%; /* Set your desired height */
+            width: 100%; 
+            height: 100%; 
             border-radius: 20px;
             padding: 30px 25px;
-            background-color: rgba(255, 255, 255, 0); /* Set background color with alpha (0.5 for 50% transparency) */
-            border: 0px solid #ccc; /* Add border for better visibility */
-            resize: none; /* Prevent textarea resizing by user */
+            background-color: rgba(255, 255, 255, 0); 
+            border: 0px solid #ccc; 
+            resize: none; 
         }
 
         .btt{
@@ -82,7 +82,7 @@
         
         .btt button:hover {
             border-radius: 5px;
-            background-color: #67e084;; /* Change this to the desired hover color */
+            background-color: #67e084;
         }
 
 
@@ -166,10 +166,4 @@
         </div>
     </div>
 
-        
-  
-
-
-
-    <!-- Rest of your content goes here -->
 </x-app-layout>

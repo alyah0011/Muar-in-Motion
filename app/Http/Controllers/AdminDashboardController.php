@@ -14,7 +14,7 @@ class AdminDashboardController extends Controller
             return view('admin.dashboard');
         } else {
             // Redirect the user to a different route if they don't have the required role
-            return redirect()->route('dashboard'); // Change 'home' to the desired route
+            return redirect()->route('dashboard'); 
         }
     }
 }

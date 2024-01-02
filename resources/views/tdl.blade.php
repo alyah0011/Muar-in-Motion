@@ -63,7 +63,6 @@
         margin-top: 2%;
     }
 
-    /* Add some media queries for responsiveness */
     @media (max-width: 768px) {
         .list {
             width: 100%;
@@ -175,7 +174,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Task status updated successfully, you can update the UI if needed
+                    // Task status updated successfully
                     console.log('Task status updated successfully');
                 } else {
                     console.error('Failed to update task status:', data.error || 'Unknown error');
@@ -204,9 +203,9 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                        // List deleted successfully, you can update the UI if needed
+                        // List deleted successfully
                         console.log('List deleted successfully');
-                        // Reload the page or update the UI as needed
+                        // Reload the page 
                         location.reload();
                     } else {
                         console.error('Failed to delete list:', data.error || 'Unknown error');

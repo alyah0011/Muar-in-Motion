@@ -77,7 +77,6 @@ Route::get('/attractions&transportation', function () {
 
 Route::get('/accommodation', [AccomodationController::class, 'index'])->name('accommodation.index');
 
-    // Route to show details of a specific accommodation
 Route::get('/accommodation/{acco_id}', [AccomodationController::class, 'show'])->name('accommodation.show');
 
 Route::get('/transportation', [TransportationController::class, 'index'])->name('transportation.index');

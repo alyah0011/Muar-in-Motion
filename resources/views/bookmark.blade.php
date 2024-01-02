@@ -1,11 +1,10 @@
 <style>
-    /* Add or modify this block in your existing styles */
 
     .flex-container {
         display: flex;
-        flex-direction: column; /* Align items vertically */
-        justify-content: center; /* Center items vertically */
-        gap: 20px; /* Adjust the gap between items */
+        flex-direction: column; 
+        justify-content: center; 
+        gap: 20px; 
         margin-top: 20px;
         margin-left: 9%;
     }
@@ -13,18 +12,18 @@
     .bookmark-item {
         display: flex;
         align-items: center;
-        gap: 20px; /* Adjust the gap between image and details */
+        gap: 20px; 
     }
 
     .rounded-image {
-        width: 20%; /* Adjust the image width as needed */
-        height: 200px; /* Adjust the image height as needed */
-        object-fit: cover; /* Ensure the image covers the container */
-        border-radius: 10px; /* Add rounded corners */
+        width: 20%; 
+        height: 200px; 
+        object-fit: cover; 
+        border-radius: 10px; 
     }
 
     .attraction-details {
-        flex-grow: 1; /* Allow details to take remaining width */
+        flex-grow: 1; 
     }
 
     .attraction-desc {
@@ -32,14 +31,14 @@
     }
 
     .bookmark-separator {
-        width: 100%; /* Full width separator */
-        margin: 10px 0; /* Adjust margin as needed */
+        width: 100%; 
+        margin: 10px 0; 
     }
 
-    /* Add media query for larger screens */
+   
     @media (min-width: 768px) {
         .rounded-image {
-            max-width: 300px; /* Increase maximum width for larger screens */
+            max-width: 300px; 
         }
     }
 
@@ -74,7 +73,6 @@
                         </div>
                     </div>
 
-                    <!-- Separator line between bookmarks -->
                     <hr class="bookmark-separator">
                 </div>
             @endforeach

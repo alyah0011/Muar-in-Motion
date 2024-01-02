@@ -16,7 +16,7 @@ class AdminForumController extends Controller
     public function updateStatus(Request $request, $id)
     {
         $forum = Forum::findOrFail($id);
-        $forum->status = 1; // Assuming 1 means approved, adjust as needed
+        $forum->status = 1; // Assuming 1 means approved
         $forum->save();
 
         return redirect()->route('admin.forum.index')->with('success', 'Post approved successfully!');

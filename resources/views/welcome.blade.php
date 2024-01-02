@@ -23,9 +23,9 @@
             }
 
             .logo-placeholder {
-                width: 50px; /* Adjust the width of the square */
-                height: 50px; /* Adjust the height of the square */
-                background-color: #007bff; /* Adjust the background color of the square */
+                width: 50px; 
+                height: 50px; 
+                background-color: #007bff; 
             }
 
         </style>
@@ -50,7 +50,6 @@
                 <div class="logo-container absolute top-0 left-0">
                     <div class="logo-placeholder"></div>
                 </div>
-            <!-- Other content of your website goes here -->
             </div>
 
             

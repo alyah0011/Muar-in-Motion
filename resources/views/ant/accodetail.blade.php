@@ -28,7 +28,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for opacity */
+        background: rgba(0, 0, 0, 0.5); 
     }
 
     .banner-title {
@@ -94,8 +94,8 @@
 
     .square hr {
         width: 100%;
-        border-color: black; /* Set the color of the horizontal rule */
-        border-width: 0.7px; /* Set the width of the border */
+        border-color: black; 
+        border-width: 0.7px; 
     }
 
     .content {
@@ -184,7 +184,7 @@
     
     .btt button:hover {
         border-radius: 5px;
-        background-color: #67e084;; /* Change this to the desired hover color */
+        background-color: #67e084;
     }
 
     hr{
@@ -204,8 +204,8 @@
     .container{
         display: flex;
         align-items: center;
-        gap: 10px; /* Adjust the gap between elements as needed */
-        margin-top: 10px; /* Adjust the top margin as needed */
+        gap: 10px; /* gap between elements */
+        margin-top: 10px; 
         padding: 20px;
         }
 
@@ -233,7 +233,7 @@
     #map {
         height: 40%;
         width: 80%;
-        margin: 0 auto; /* Center the map */
+        margin: 0 auto; 
         transform: none;
     }
 
@@ -260,31 +260,31 @@
             width: 100%;
             transform: translate(0, -50%);
             text-align: center;
-            font-size: 5vw; /* Adjust the font size for smaller screens */
+            font-size: 5vw; 
         }
 
         .banner-desc {
             width: 100%;
             transform: translate(0, -90%);
             text-align: center;
-            font-size: 3vw; /* Adjust the font size for smaller screens */
+            font-size: 3vw; 
         }
 
         .flex-container {
-            flex-direction: column; /* Stack items vertically for smaller screens */
+            flex-direction: column; 
             align-items: center;
             gap: 20px;
         }
 
         .square {
-            width: 80%; /* Full width for smaller screens */
+            width: 80%; 
             margin-left: 0;
             margin-right: 0;
             padding: 20px;
         }
 
         .square p {
-            font-size: 3vw; /* Adjust the font size for smaller screens */
+            font-size: 3vw; 
         }
 
         .content {
@@ -292,13 +292,13 @@
         }
 
         .title {
-            font-size: 5vw; /* Adjust the font size for smaller screens */
+            font-size: 5vw; 
             margin-left: 10%;
         }
 
         .ldesc {
             width: 80%;
-            font-size: 3vw; /* Adjust the font size for smaller screens */
+            font-size: 3vw; 
             margin-left: 10%;
         }
 
@@ -311,11 +311,11 @@
 
         input[type="number"],
         textarea {
-            font-size: 3vw; /* Adjust the font size for smaller screens */
+            font-size: 3vw; 
         }
 
         .btt button {
-            width: 40%; /* Adjust the button width for smaller screens */
+            width: 40%; 
         }
 
         hr {
@@ -328,17 +328,17 @@
         }
 
         .review {
-            /* Adjust styles as needed for smaller screens */
+           
         }
 
         .review .container {
-            flex-direction: column; /* Stack elements vertically for smaller screens */
+            flex-direction: column; 
             align-items: flex-start;
             margin-left: 0;
         }
 
         .container p {
-            margin-top: 0; /* Remove top margin for paragraphs in container */
+            margin-top: 0; 
         }
 
         .time {
@@ -352,7 +352,7 @@
         }
 
         .attraction-rating {
-            margin-top: 0; /* Remove top margin for attraction rating */
+            margin-top: 0; 
             margin-left: 0;
         }
     }
@@ -496,7 +496,6 @@
             });
 
             // Example of updating the marker position when the attraction coordinates change
-            // You can trigger this update when necessary, for instance, after an AJAX request.
             function updateMarkerPosition(newLat, newLongi) {
                 marker.setLatLng([newLat, newLongi]);
             }

@@ -12,7 +12,6 @@ use Laravel\Fortify\Http\Controllers\RegisteredUserController as FortifyRegister
 
 class RegisterController extends FortifyRegisteredUserController
 {
-    // ... (existing code)
 
     public function create(Request $request): RegisterViewResponse
     {

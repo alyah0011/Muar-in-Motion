@@ -1,6 +1,5 @@
 <head>
 
-    <!-- Add this in your HTML file, typically in the head section -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -142,12 +141,11 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- Your edit form goes here -->
+                                    <!-- Edit form -->
                                     <form action="{{ route('admin.homepage.update', ['id' => $homepage->homepage_id, 'subdirectory' => 'homepage']) }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
-                                        
-                                        <!-- Include form fields for updating homepage data -->
+                        
                                         <div class="form-group">
                                             <label for="website_title">Website Title</label>
                                             <input type="text" class="form-control" id="website_title" name="website_title" value="{{ $homepage->website_title }}" required>

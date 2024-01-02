@@ -14,7 +14,7 @@
 </head>
 
 <style>
-    /* CSS Reset */
+  
     * {
         margin: 0;
         padding: 0;
@@ -81,8 +81,8 @@
     .c1:hover,
     .c2:hover,
     .c3:hover {
-        /* Set styles on hover */
-        transform: scale(1.1); /* Scale up to 110% on hover */
+       
+        transform: scale(1.1); 
     }
 
     .container a {
@@ -225,7 +225,6 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 24px;
-        /* Adjust the font size as needed */
         cursor: pointer;
     }
 
@@ -245,7 +244,6 @@
         height: 424px;
         overflow: hidden;
         margin: 0 auto;
-        /* Center horizontally */
         margin-top: 40px;
     }
 
@@ -266,7 +264,6 @@
 
     .carousel-item:hover img {
         transform: scale(1.2);
-        /* Zoom in by 20% on hover */
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
@@ -287,13 +284,9 @@
 
     .categories {
         display: flex;
-        /* Use flexbox */
         justify-content: center;
-        /* Center items horizontally */
         gap: 150px;
-        /* Add some space between items */
         margin-top: 20px;
-        /* Add margin to the top for spacing */
     }
 
     .categories .cat {
@@ -301,12 +294,11 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        /* Center items vertically */
     }
 
     .categories .cat:hover .icon img {
-        transform: scale(1.2); /* Adjust the scale factor as needed */
-        transition: transform 0.3s ease; /* Add a smooth transition effect */
+        transform: scale(1.2); 
+        transition: transform 0.3s ease; 
     }
 
     .fadeIn {
@@ -343,25 +335,25 @@
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; /* Semibold font weight */
         font-size: 12px;
-        color: #00A4FF; /* Color code */
+        color: #00A4FF; 
         
     }
 
     .map-container {
         height: 400px;
         width: 80%;
-        margin: 0 auto; /* Center the map */
-        position: relative; /* Make it a positioning context for absolute positioning */
+        margin: 0 auto; 
+        position: relative; 
     }
 
     .attraction-pin {
         width: 30px;
         height: 30px;
-        background-color: red; /* Change color as needed */
+        background-color: red; 
         border-radius: 50%;
         cursor: pointer;
         transition: transform 0.3s;
-        z-index: 0; /* Set a lower z-index than the preview */
+        z-index: 0; 
     }
 
     .attraction-preview {
@@ -375,7 +367,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         padding: 10px;
-        z-index: 1000; /* Set a higher z-index than the pin */
+        z-index: 1000; 
     }
 
     .attraction-preview img{
@@ -395,7 +387,7 @@
         border: 2px solid #000;
         border-radius: 30px;
         text-decoration: none;
-        color: #000; /* Adjust text color */
+        color: #000; 
         font-weight: bold;
         transition: background-color 0.3s;
         display: flex;
@@ -407,11 +399,10 @@
 
 
     .attraction-btn:hover {
-        background-color: rgba(19, 16, 163, 0.2); /* Adjust hover background color */
+        background-color: rgba(19, 16, 163, 0.2); 
     }
 
 
-    /* Adjust banner title and description font size for smaller screens */
     @media (max-width: 768px) {
         .banner-title {
             font-size: 8vw;
@@ -438,7 +429,6 @@
         
     }
 
-    /* Adjust font sizes for history section on smaller screens */
     @media (max-width: 768px) {
         .hist-title {
             font-size: 5vw;
@@ -449,7 +439,6 @@
         }
     }
 
-    /* Adjust font sizes for description section on smaller screens */
     @media (max-width: 768px) {
         .desc h2 {
             font-size: 8vw;
@@ -460,7 +449,6 @@
         }
     }
 
-    /* Adjust font sizes for attraction and ant sections on smaller screens */
     @media (max-width: 768px) {
         .att h2,
         .ant h2 {
@@ -475,14 +463,12 @@
         }
     }
 
-    /* Adjust font size for category labels on smaller screens */
     @media (max-width: 768px) {
         .categories .cat p {
             font-size: 3vw;
         }
     }
 
-    /* Adjust carousel height for smaller screens */
     @media (max-width: 768px) {
         .carousel {
             height: 300px;

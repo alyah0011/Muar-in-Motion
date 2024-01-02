@@ -21,7 +21,7 @@ class Attraction extends Model
         'att_contact',
         'att_lat',
         'att_longi',
-        'average_rating', // Add 'average_rating' to the fillable array
+        'average_rating', 
     ];
 
     protected $appends = ['reviews_count'];

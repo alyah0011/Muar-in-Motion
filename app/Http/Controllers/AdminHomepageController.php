@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminHomepageController extends Controller
 {
-    // AdminHomepageController.php
     public function index()
     {
         // Retrieve all records from the homepages table
@@ -55,7 +54,7 @@ class AdminHomepageController extends Controller
         // Save the changes
         $homepage->save();
 
-        // Redirect back to the index or any other appropriate route
+        // Redirect back to the index
         return redirect()->route('admin.homepage.index')->with('success', 'Homepage updated successfully');
     }
 

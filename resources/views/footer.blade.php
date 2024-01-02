@@ -8,44 +8,42 @@
         height: auto;
         padding: 60px;
         align-items: center;
-        justify-content: space-between; /* Added to push f-left to the left and f-right to the right */
+        justify-content: space-between; 
     }
 
     .f-container {
         width: 100%;
-        max-width: 1200px; /* Adjust the maximum width as needed */
+        max-width: 1200px; 
         margin: 0 auto;
     }
 
     .f-row {
         display: flex;
-        justify-content: space-between; /* Added for additional spacing between f-left and f-right */
+        justify-content: space-between; 
         width: 100%;
     }
 
     .f-left {
-        width: 48%; /* Adjust the width as needed */
+        width: 48%; 
     }
 
     .f-right {
-        width: 48%; /* Adjust the width as needed */
-        text-align: right; /* Align text to the right */
+        width: 48%; 
+        text-align: right; 
     }
 
     .partners {
-        /* Add styles for the partners section if needed */
-        display: flex; /* Make the container a flex container */
+        display: flex; 
         align-items: center;
-        justify-content: flex-end; /* Align items vertically in the flex container */
+        justify-content: flex-end; 
         order: 2;
     }
 
     .partners h3 {
-        /* Add styles for the partners heading if needed */
+
     }
 
     .partners img {
-        /* Add styles for partner logos if needed */
         max-width: auto;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -53,7 +51,6 @@
         margin-left: 10px;
     }
 
-    /* Add any additional styles as needed */
 
 </style>
 

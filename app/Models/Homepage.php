@@ -17,6 +17,5 @@ class Homepage extends Model
         'banner_img',
         'history_img',
         'history_desc',
-        // Add other fields here
     ];
 }

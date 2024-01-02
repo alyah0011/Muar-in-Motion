@@ -14,7 +14,7 @@
     img{
         width: 100%;
         height: auto;
-        max-height: 680px; /* Adjust the maximum height as per your design */
+        max-height: 680px; 
         
     }
 
@@ -28,7 +28,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for opacity */
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .banner-title{
@@ -64,7 +64,7 @@
             display: flex;
             width: 100%;
             margin-top: 20px;
-            align-items: flex-start; /* Align items vertically at the start */
+            align-items: flex-start; 
         }
 
     .square {
@@ -95,8 +95,8 @@
 
     .square hr {
         width: 100%;
-        border-color: black; /* Set the color of the horizontal rule */
-        border-width: 0.7px; /* Set the width of the border */
+        border-color: black;
+        border-width: 0.7px; 
     }
 
     .separator{
@@ -131,7 +131,7 @@
     #map {
         height: 40%;
         width: 80%;
-        margin: 0 auto; /* Center the map */
+        margin: 0 auto; 
         transform: none;
     }
 
@@ -251,7 +251,6 @@
             });
 
             // Example of updating the marker position when the attraction coordinates change
-            // You can trigger this update when necessary, for instance, after an AJAX request.
             function updateMarkerPosition(newLat, newLongi) {
                 marker.setLatLng([newLat, newLongi]);
             }

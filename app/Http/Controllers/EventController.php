@@ -74,7 +74,7 @@ class EventController extends Controller
                 }
             })->get();
 
-            // You can also return the filtered events as JSON if you prefer
+            
             return response()->json(['html' => view('event.filter', ['events' => $filteredEvents])->render()]);
 
         } catch (\Exception $e) {

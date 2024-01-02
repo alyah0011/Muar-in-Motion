@@ -1,5 +1,5 @@
 <head>
-    <!-- Add this in your HTML file, typically in the head section -->
+  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -23,7 +23,7 @@
         }
 
         .btn-primary {
-            background-color: #007bff !important; /* Set your desired background color */
+            background-color: #007bff !important; 
         }
 
         #pageSelection {
@@ -153,7 +153,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <!-- Your edit form goes here -->
+                                                    <!-- Edit form -->
                                                     <form action="{{ route('admin.transportation.update', ['id' => $transportation->trans_id]) }}" method="post" enctype="multipart/form-data">
                                                         @csrf
                                                         @method('PUT')
@@ -217,7 +217,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- Your add form goes here -->
+                    <!-- Add form-->
                     <form action="{{ route('admin.transportation.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- transportation Name -->

@@ -1,7 +1,5 @@
 <style>
 
-    
-
     .flex-container{
         display: flex;
         flex-direction: column;
@@ -27,13 +25,13 @@
     }
 
     .transparent-textarea {
-        width: 100%; /* Set your desired width */
-        height: 100%; /* Set your desired height */
+        width: 100%; 
+        height: 100%; 
         border-radius: 20px;
         padding: 30px 25px;
-        background-color: rgba(255, 255, 255, 0.5); /* Set background color with alpha (0.5 for 50% transparency) */
-        border: 1px solid #ccc; /* Add border for better visibility */
-        resize: none; /* Prevent textarea resizing by user */
+        background-color: rgba(255, 255, 255, 0.5); 
+        border: 1px solid #ccc; 
+        resize: none; 
     }
 
     .bottom{
@@ -71,7 +69,7 @@
     
     .comment-section button:hover, .btt button:hover {
         border-radius: 5px;
-        background-color: #67e084;; /* Change this to the desired hover color */
+        background-color: #67e084;
     }
 
     .result{
@@ -82,8 +80,8 @@
     .container{
         display: flex;
         align-items: center;
-        gap: 10px; /* Adjust the gap between elements as needed */
-        margin-top: 30px; /* Adjust the top margin as needed */
+        gap: 10px; 
+        margin-top: 30px; 
         }
 
     .container p{
@@ -109,10 +107,10 @@
     .content img {
         max-width: 70%;
         height: auto;
-        max-height: 400px; /* Set a maximum height if needed */
+        max-height: 400px; 
         margin-top: 20px;
         border-radius: 20px;
-        display: block; /* Use block display to avoid extra space beneath the image */
+        display: block; 
         margin-left: auto;
         margin-right: auto;
     }
@@ -134,7 +132,7 @@
 
     .comment-section {
         margin-top: 10px;
-        position: relative; /* Change to relative positioning */
+        position: relative; 
     }
 
     .comment-section form {
@@ -143,11 +141,11 @@
     }
 
     .comment-section textarea {
-        width: calc(100% - 20px); /* Adjusted width */
+        width: calc(100% - 20px); 
         margin-bottom: 10px;
-        border-radius: 20px; /* Added border-radius */
-        padding: 10px; /* Added padding */
-        border: 1px solid #ccc; /* Added border */
+        border-radius: 20px; 
+        padding: 10px; 
+        border: 1px solid #ccc; 
     }
 
     .comment {

@@ -3,7 +3,7 @@
     .flex-container {
         display: flex;
         margin-top: 20px;
-        align-items: flex-start; /* Align items vertically at the start */
+        align-items: flex-start; 
     }
         
     .container{
@@ -18,7 +18,7 @@
 
     .rectangle, .image-placeholder {
         width: 100%;
-        border-radius: 20px; /* Rounded corners for both rectangle and image */
+        border-radius: 20px; 
 
     }
 
@@ -35,8 +35,8 @@
         opacity: 100%;
         border-radius: 20px 20px 0 0; 
         height: 121px;
-        background-size: cover; /* Cover the entire container with the image */
-        background-position: center; /* Center the image within the container */
+        background-size: cover; 
+        background-position: center; 
         position: absolute;
         overflow: hidden;
     }
@@ -51,7 +51,7 @@
 
     .rectangle:hover .image-placeholder img,
     .rectangle .image-placeholder:hover img {
-        transform: scale(1.2); /* Zoom in by 20% on hover */
+        transform: scale(1.2); 
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
@@ -70,34 +70,34 @@
         font-family: 'Quicksand', sans-serif;
         font-weight: 550;
         font-size: 20px;
-        color: #1310A3; /* Adjust the color as needed */
+        color: #1310A3; 
         margin-top: 141px;
     }
 
     .attraction-title a {
-        text-decoration: none; /* Remove underline by default */
-        color: #1310A3; /* Adjust the color as needed */
-        transition: text-decoration 0.3s ease; /* Add smooth transition effect */
+        text-decoration: none; 
+        color: #1310A3; 
+        transition: text-decoration 0.3s ease; 
     }
 
     .attraction-title a:hover {
-        text-decoration: underline; /* Add underline on hover */
+        text-decoration: underline; 
     }
 
     .attraction-desc {
         position: relative;
         padding-left: 27px;
         padding-right: 27px;
-        max-width: 100%; /* Set a maximum width for the container */
-        overflow-wrap: break-word; /* Wrap long words onto the next line */
+        max-width: 100%; 
+        overflow-wrap: break-word; 
         margin-top: 20px;
     }
 
     .attraction-price-range {
         z-index: 3;
         padding-left: 27px;
-        color: black; /* Set the color for the price range */
-        margin-top: 171px; /* Adjust the margin as needed */
+        color: black; 
+        margin-top: 171px; 
         font-weight: bold;
     }
 

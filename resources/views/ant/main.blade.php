@@ -13,10 +13,10 @@
     }
 
     .categories {
-        display: flex; /* Use flexbox */
-        justify-content: center; /* Center items horizontally */
-        gap: 150px; /* Add some space between items */
-        margin-top: 20px; /* Add margin to the top for spacing */
+        display: flex; 
+        justify-content: center; 
+        gap: 150px; 
+        margin-top: 20px; 
     }
 
     .cat {
@@ -26,8 +26,8 @@
     }
 
     .categories .cat:hover .icon img {
-        transform: scale(1.2); /* Adjust the scale factor as needed */
-        transition: transform 0.3s ease; /* Add a smooth transition effect */
+        transform: scale(1.2); 
+        transition: transform 0.3s ease; 
     }
 
     .section h2{
@@ -56,7 +56,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 24px; /* Adjust the font size as needed */
+        font-size: 24px; 
         cursor: pointer;
     }
 
@@ -75,7 +75,7 @@
         width: 80%;
         height: 424px;
         overflow: hidden;
-        margin: 0 auto; /* Center horizontally */
+        margin: 0 auto; 
         margin-top: 40px;
     }
 
@@ -95,7 +95,7 @@
     }
 
     .carousel-item:hover img {
-        transform: scale(1.2); /* Zoom in by 20% on hover */
+        transform: scale(1.2); 
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);

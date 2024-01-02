@@ -9,7 +9,7 @@ class TodoList extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'tdl_id'; // Add this line
+    protected $primaryKey = 'tdl_id'; 
 
     protected $fillable = ['tdl_title', 'tdl_date'];
 
