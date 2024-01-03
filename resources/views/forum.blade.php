@@ -349,7 +349,7 @@
                 const authStatus = document.getElementById('auth-status').dataset.auth;
                 
                 mainForm.addEventListener('submit', function (event) {
-                    // Check if the user is logged in using Laravel authentication
+                    
                     if (authStatus === 'true') {
                         // Show the alert for logged-in users
                         alert('Your post will be pending for approval. Thank you for contributing!');
