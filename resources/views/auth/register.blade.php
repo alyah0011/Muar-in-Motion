@@ -46,7 +46,7 @@
 
             <div class="mt-4">
                 <x-label for="user_location" value="{{ __('User Address') }}" />
-                <x-input id="user_location" class="block mt-1 w-full" type="text" name="user_location" :value="old('user_location')" required />
+                <x-input id="user_location" class="block mt-1 w-full" type="text" name="user_location" :value="old('user_location')" required placeholder="Gombak, Selangor"/>
             </div>
 
             <div class="mt-4">

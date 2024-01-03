@@ -186,6 +186,8 @@
 
     <div style="background-image: url('/build/assets/eventsbg.png');background-repeat: repeat; min-height: 100vh;">
 
+        <div id="auth-status" data-auth="{{ auth()->check() ? 'true' : 'false' }}"></div>
+
         <div class="flex-container">
                 <div class="my-form">
                     <form action="{{ route('forum.store') }}" method="post" enctype="multipart/form-data">
@@ -343,12 +345,18 @@
 
             const mainForm = document.querySelector('.my-form form');
 
-            mainForm.addEventListener('submit',function(){
-
-                // event.preventDefault();
-
-                alert('Your post will be pending for approval. Thank you for contributing!');
-            })
+            (function () {
+                const authStatus = document.getElementById('auth-status').dataset.auth;
+                
+                mainForm.addEventListener('submit', function (event) {
+                    // Check if the user is logged in using Laravel authentication
+                    if (authStatus === 'true') {
+                        // Show the alert for logged-in users
+                        alert('Your post will be pending for approval. Thank you for contributing!');
+                    }
+                    // If the user is not logged in, the form will submit without showing the alert
+                });
+            })();
 
             function copyToClipboard(text) {
                 // Create a temporary textarea to copy the text to the clipboard
