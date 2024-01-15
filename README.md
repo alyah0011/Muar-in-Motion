@@ -79,6 +79,76 @@ Fig.2 shows the use case diagram which illustrates a list of key business actors
 
 The "Browse Content" use case involves Users exploring website content. Users also utilize the "Search" use case to find relevant information through keyword queries. "Filter" allows Users to refine event searches by date, while "Log In" facilitates user access to registered accounts. Users can create new accounts via the "Sign Up" use case. "Bookmark Content" enables Users to save attractions for later reference, and "Leave Review" lets Users provide feedback on attractions. Additionally, the "Write in Forum" use case allows logged-in Users to share their thoughts related to the region on the forum page. Users can generate task lists for specific dates using the "Create To-Do-List" feature. Lastly, the "Add Content" use case allows Admins to contribute new posts, maintaining up-to-date website information. These requirements collectively shape the functionality and user experience of the Muar-in-Motion website.
 
+C. **Database Design**
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/37b0ec84-890c-429e-a1b9-1f438b52e158 "Fig. 3 Entity Relationship Diagram")
+
+Figure 3 displays the Entity Relationship Diagram (ERD) for the Muar-in-Motion website, involving 8 entities.
+
+1. **User:**
+   - The "User" table contains information about individuals using the system.
+   - Attributes include a unique user ID, a password for authentication, the user's name, and their email address.
+
+2. **Admin:**
+   - The "Admin" table stores data related to administrators of the system.
+   - Includes a unique admin ID and an admin password for secure access.
+
+3. **Attraction:**
+   - The "Attraction" table holds details about various attractions.
+   - Attributes include a unique attraction ID, categories characterizing the attraction, its name, a description, and latitude and longitude coordinates indicating its location.
+
+4. **Event:**
+   - The "Event" table records information about events.
+   - Attributes include a unique event ID, the event's name, a description of the event, its date, and the scheduled time.
+
+5. **Forum:**
+   - The "Forum" table manages forum messages.
+   - Attributes include a unique forum ID, a timestamp for when the message was posted, the subject of the message, a description of the message, and an attachment file associated with it.
+
+6. **Bookmark:**
+   - The "Bookmark" table facilitates the bookmarking of attractions.
+   - Attributes include a unique bookmark ID, categories, the name of the bookmark, a description, and latitude and longitude coordinates for the bookmarked location.
+
+7. **To-do-List:**
+   - The "To-do-List" table organizes user tasks.
+   - Attributes include a unique to-do list ID, a title for the to-do list, and a date for which the list is relevant.
+
+8. **Task:**
+   - The "Task" table manages individual tasks.
+   - Attributes include a unique task ID and a name describing the task.
+  
+D. **System Output**
+
+**User's View**
+This section presents the user's views of Muar-in-Motion, encompassing the Homepage, Attraction Pages, Accommodation Pages, Transportation Pages, Event Pages, Forum Page, Search Features, Profile Page, Bookmark Page, and TDL Page. Screenshots of user’s views are shown in figures below.
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/c3ad3434-a9c0-4286-bbb4-58a4aec896a3 "Fig. 4 Homepage")
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/3ac8914b-614f-44e0-8799-041537e66f7a "Fig. 5 Attraction Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/21631276-ca7f-4710-8b90-7cbc948908b0 "Fig. 6 Attraction Category Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/56a710da-9026-4c59-805d-e6c7bd55c6ec "Fig. 7 Attraction Detail Page")
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/89dd1a0e-b6aa-4adf-9acb-8f384aa02254 "Fig. 8 Accommodation & Transporattion Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/bad10743-c56a-4086-8b5d-109e142d8f6d "Fig. 9 Accommodation Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/cf6b3b62-d6a1-4f18-9c36-f53daf4232c7 "Fig. 10 Accommodation Detail Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/62901151-7ceb-4601-aff9-b8ac47268bcf "Fig. 11 Transportation Page")
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/81f4d53a-e189-46bf-bae0-eb38713b7970 "Fig. 12 Event Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/97976515-e8ef-47f9-90c7-4fe9294227b7 "Fig. 13 Event Detail Page")
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/959e0754-6d3c-4ec9-9c0a-73875d003e58 "Fig. 14 Forum Page")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
