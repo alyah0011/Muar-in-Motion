@@ -35,6 +35,7 @@ In adapting the project, we looked at similar systems in Table 1 and decided on 
 ## Methodology
 
 A. **Development Approach**
+
 System development methodologies are used to provide a structured approach to developing systems. These methodologies are essential for managing system development from planning to implementation and maintenance. There are a variety of options available, including the Waterfall model, System Development Life Cycle (SDLC), Agile methodology, Rapid Application Development (RAD), Scrum, Spiral model, and others. Choosing the appropriate methodology for a specific project is crucial to ensure that the project's goals are achieved within the expected timeframe and budget. After conducting thorough research and considering the project’s unique requirements, goals, and available resources, below is the methodology that has been decided for this project's system development.
 
 
@@ -73,6 +74,7 @@ According to Pinheiro (2018) and Fig. 1 illustrated above, there are 6 steps to 
    - This phase is crucial to ensure the system remains effective and efficient over time.
 
 B. **System Design**
+
 This section involves analysing the requirements and creating use case diagram to aid in understanding for developer. 
 
 
