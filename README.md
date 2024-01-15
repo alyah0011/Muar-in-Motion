@@ -1,4 +1,4 @@
-# Muar-in-Motion
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/aec5e1ef-f7c5-4d14-9c95-9577263fb2bb)![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/99cf02da-83f1-4a19-a501-d6a38d5c4e67)![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/2c0ff853-de13-4e80-82f2-69d7af1c5cc5)# Muar-in-Motion
 
 # Introduction
 Muar-in-Motion is a project initiated by The Muara (FG 21), a flagship project under the IIUM Flagship Project. Developed in collaboration between the Kulliyyah of Languages and Management (KLM) and Tanjung Kunang Enterprise, the project aims to promote and enhance the tourism industry in the Muar region [8]. The Muar-in-Motion web application is a vital tool designed to assist in achieving this mission. It serves as an intuitive platform for potential tourists, providing easy access to important information, including details about tourist attractions, transportation options, accommodation, and a seamless communication platform for visitors to connect and plan their trips.
@@ -137,6 +137,90 @@ This section presents the user's views of Muar-in-Motion, encompassing the Homep
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/97976515-e8ef-47f9-90c7-4fe9294227b7 "Fig. 13 Event Detail Page")
 
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/959e0754-6d3c-4ec9-9c0a-73875d003e58 "Fig. 14 Forum Page")
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/a5ee70d9-50a9-4234-a8dc-fefc60894068 "Fig. 15 Profile Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/bcb94e48-494c-4d55-8297-1c260374f456 "Fig. 16 My List Page")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/a406f13d-854a-4589-ac8e-17b56934a90b "Fig. 17 Bookmark Page")
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/acd50bb7-fe69-467a-abc4-c700441456be "Fig. 18 Search Result(1)")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/fcf731e9-5b14-4e7d-91d9-67c4e7ca8533 "Fig. 19 Search Result(2)")
+
+**Admin's View**
+This section displays the admin’s view of the Muar-in-Motion where it consists of Admin Dashboard, Homepage Editor, Attraction Editor, Accommodation Editor, Transportation Editor, Event Editor and Forum Editor. Screenshots of admin’s views are shown in figures below.
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/cf039cf1-ca49-4912-8d40-739c5c2764b4 "Fig. 20 Admin's Dashboard")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/86dddbfd-98ad-4e1c-bab6-99ddb710d495 "Fig. 21 Homepage Editor")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/73ec87e3-e553-45cf-8ac8-dbb5c88025ec "Fig. 22 Attraction Editor")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/321c42d3-721b-4567-863f-0433a8023843 "Fig. 23 Acommodation Editor")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/2c88bc40-6e06-4de3-b709-27020489677c "Fig. 24 Transportation Editor")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/13c90bfc-b06c-488d-a733-903cc77a852a "Fig. 25 Event Editor")
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/e9138b8c-a1bc-4724-a18e-5a667a5ef37c "Fig. 26 Forum Editor")
+
+## Project Constraints
+
+In terms of project constraints, there are several noteworthy challenges. The main constraint during this development is the absence of a project partner which has made self-motivation more difficult as everything is up to only one developer. Partner would have diversified the development perspective with rich feedback and contribute to making the web application better as well as undoubtedly lessening the burden of development. The next issue pertains to the significant number of credit hours taken this semester has posed a considerable challenge in managing the progress of this project, especially while juggling responsibilities across five other subjects and coding tasks. However, following the guidelines of completion guided by supervisor has been very helpful to keep the development on track. Lastly, after the FYP1 showcase, a meeting was conducted with the clients, resulting in the discovery of new attributes requested by the client. Consequently, the tables underwent numerous iterative adjustments throughout the development process.
+
+## Significance of the Project
+   This project can bring about significant benefits both for the individual and the organization. From a personal standpoint, this project offers an opportunity to expand knowledge and acquire new skills, particularly in coding a web application and understanding the inner workings of the organization. Moreover, the project can help refine soft skills such as communication, particularly when discussing with clients and end users. 
+
+For the organization, the project can create a valuable alternative for potential tourists to easily access information on Muar tourist attraction. This can improve the region's online presence and attract more visitors to Muar. The development of this web application can help the organization reach a broader audience and enhance tourist satisfaction by providing up-to-date information on the attraction. In conclusion, this project achieves significant positive impacts for both the individual and the organization.
+
+## Conclusion
+In addressing the lack of smart tourism utilization in Muar region, the development of Muar-in-Motion website is a crucial step to take. Simultaneously aligning with the flagship mission to promote and enhance tourism in the area. Moreover, the website will be well-equipped with tourist-tailored information covering attractions, accommodation, transportation, events, and forums. Hence, the existence of this website could help tourists plan their travel to Muar without hassle. It is also worth noting, FYP1 has achieved a significant milestone by completing the development process up to the design phase. The input gathered through interviews and questionnaires has greatly helped formulate a comprehensive system design, database design and interface design. These design elements will without doubt serve as a blueprint to complete the development of this system.
+
+## References
+
+1. **Visit Singapore - Passion Made Possible**
+   - Visit Singapore Official Site
+   - [Online](https://www.visitsingapore.com/en_my/)
+   - Accessed: Apr. 12, 2023.
+
+2. **What's on in Sydney**
+   - Sydney.com
+   - [Online](https://www.sydney.com/events)
+   - Accessed: Apr. 12, 2023.
+
+3. **Visit California**
+   - Visit California
+   - [Online](https://www.visitcalifornia.com/)
+   - Accessed: Apr. 12, 2023.
+
+4. **Japan National Tourism Organization (JNTO)**
+   - Welcome to the Japan National Tourism Organization Website
+   - [Online](https://www.japan.travel/en/my/)
+   - Accessed: Apr. 12, 2023.
+
+5. **Tour MuOve**
+   - Kulliyyah of Languages and Management, 2020
+   - [Online](https://flagship.iium.edu.my/muara/)
+   - Accessed: Apr. 12, 2023.
+
+6. **Software development life cycle (SDLC) phases**
+   - J. Pinheiro, Medium, Apr. 12, 2018.
+   - [Online](https://medium.com/@jilvanpinheiro/software-development-life-cycle-sdlc-phases-40d46afbe384)
+
+7. **The Muara: A Living River Lab in Muar**
+   - N. H. Abd Rahman, Kulliyyah of Languages and Management, 2019.
+   - [Online](https://flagship.iium.edu.my/muara/)
+  
+8. **Visit Perlis**
+   - R4HM4N, Oct. 19, 2019.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
