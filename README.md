@@ -22,3 +22,66 @@ The system's development aims to promote and enhance tourism in Muar by meeting 
 
 3. **Platform Used:**
    - PHP, Laravel, MYSQL, Figma, Draw.io, and Procreate
+
+## Literature Review
+The main objective of this literature review is to identify the most suitable features for The Muar-in-Motion website which has the aim of boosting and promoting tourism in the Muar region. In this review, analysing and evaluating similar systems to the one will be developing will be the focus. By examining the advantages and disadvantages of these systems, hope to identify potential opportunities and pitfalls to avoid while developing this system.
+
+Five websites were selected for the literature review: Visit Singapore [1], Sydney.com [2], Visit California [3], Japan.travel [4], and Tour MuOve [5]. By comparing these websites, we can identify the fundamental aspects of tourism websites. Moreover, a few websites were particularly impressive, highlighting potential additional features that could enhance the Muar-in Motion website. The results are summarized and presented in Table 1.
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/15f05169-d8b5-438d-b995-5d815a84dcd0 "Table 1: Comparison of Similar Systems")
+
+In adapting the project, we looked at similar systems in Table 1 and decided on the features to include in the Muar-in-Motion website. These include sections for "Things to Do" and "Places to Visit," an Events Calendar, a simple Search Bar, the ability to Bookmark, options to Filter, organized content, an attractive design, details about Accommodation and Transportation, integration with Google Maps, a way for administrators to Log in, a platform for discussions, and the addition of a To-do List. The To-do List is an extra feature that lets users plan and keep track of activities for specific days, allowing them to create multiple lists for different occasions.
+
+## Methodology
+
+A. **Development Approach**
+System development methodologies are used to provide a structured approach to developing systems. These methodologies are essential for managing system development from planning to implementation and maintenance. There are a variety of options available, including the Waterfall model, System Development Life Cycle (SDLC), Agile methodology, Rapid Application Development (RAD), Scrum, Spiral model, and others. Choosing the appropriate methodology for a specific project is crucial to ensure that the project's goals are achieved within the expected timeframe and budget. After conducting thorough research and considering the project’s unique requirements, goals, and available resources, below is the methodology that has been decided for this project's system development.
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/d08e562f-253b-43d2-92c3-618ddaddc4be  "Fig. 1 System Development Life Cycle")
+
+According to Pinheiro (2018) and Fig. 1 illustrated above, there are 6 steps to be included in the System Development Life Cycle [7] which are: 
+
+1. **Planning:**
+   - This is the initial phase of the SDLC process.
+   - The developer works with stakeholders to identify and document the system's requirements.
+   - A survey questionnaire will be conducted to get requirements from end users.
+   - During this phase, the developer must define the goals and objectives of the system, identify the users and their needs, and determine the functional and non-functional requirements.
+
+2. **Analysis:**
+   - In this phase, the developer reviews the requirements and creates a detailed plan for the system.
+   - They evaluate the technical feasibility of the project, determine the hardware and software requirements, and identify any potential risks or constraints.
+
+3. **Design:**
+   - The Design phase is divided into three parts: System Design, Database Design, and Interface Design.
+   - For the System Design, use case diagrams, along with sequence diagrams and activity diagrams, will be utilized to visualize the flow of the system.
+   - The design should be comprehensive enough to guide the developer during the coding phase.
+
+4. **Coding:**
+   - This is the phase where the actual development of the system takes place.
+   - The coding phase involves writing code for the system components based on the design documents.
+   - The languages that will be used for this system development are PHP and Laravel.
+
+5. **Testing:**
+   - This is a crucial phase of the SDLC process where the developer tests the system to ensure that it meets the requirements and performs as expected.
+   - The testing phase involves doing the User Acceptance Test to ensure the system meets end users' needs and is ready for deployment.
+
+6. **Maintenance:**
+   - After the Testing phase, constructive feedback from end users and stakeholders is obtained.
+   - This feedback is reviewed by the team, and the system will be subjected to updates to fix any issues that arise.
+   - This phase is crucial to ensure the system remains effective and efficient over time.
+
+B. **System Design**
+This section involves analysing the requirements and creating use case diagram to aid in understanding for developer. 
+
+![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/d3faa6a4-b29a-4e15-9a3e-b3ae2659976b "Fig. 2 Use Case Diagram")
+
+Fig.2 shows the use case diagram which illustrates a list of key business actors, and their roles. The "Admin" or "Website Master" is responsible for content updates, user feedback review, and website performance monitoring. On the other hand, the "User" or "Visitor" refers to individuals who visit and engage with the website's features.
+
+The "Browse Content" use case involves Users exploring website content. Users also utilize the "Search" use case to find relevant information through keyword queries. "Filter" allows Users to refine event searches by date, while "Log In" facilitates user access to registered accounts. Users can create new accounts via the "Sign Up" use case. "Bookmark Content" enables Users to save attractions for later reference, and "Leave Review" lets Users provide feedback on attractions. Additionally, the "Write in Forum" use case allows logged-in Users to share their thoughts related to the region on the forum page. Users can generate task lists for specific dates using the "Create To-Do-List" feature. Lastly, the "Add Content" use case allows Admins to contribute new posts, maintaining up-to-date website information. These requirements collectively shape the functionality and user experience of the Muar-in-Motion website.
+
+
+
+
+
+
+
