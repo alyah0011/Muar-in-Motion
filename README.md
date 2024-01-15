@@ -37,9 +37,9 @@ In adapting the project, we looked at similar systems in Table 1 and decided on 
 A. **Development Approach**
 System development methodologies are used to provide a structured approach to developing systems. These methodologies are essential for managing system development from planning to implementation and maintenance. There are a variety of options available, including the Waterfall model, System Development Life Cycle (SDLC), Agile methodology, Rapid Application Development (RAD), Scrum, Spiral model, and others. Choosing the appropriate methodology for a specific project is crucial to ensure that the project's goals are achieved within the expected timeframe and budget. After conducting thorough research and considering the project’s unique requirements, goals, and available resources, below is the methodology that has been decided for this project's system development.
 
-<p align="center">
+
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/d08e562f-253b-43d2-92c3-618ddaddc4be  "Fig. 1 System Development Life Cycle")
-</p>
+
 
 According to Pinheiro (2018) and Fig. 1 illustrated above, there are 6 steps to be included in the System Development Life Cycle [7] which are: 
 
@@ -75,9 +75,9 @@ According to Pinheiro (2018) and Fig. 1 illustrated above, there are 6 steps to 
 B. **System Design**
 This section involves analysing the requirements and creating use case diagram to aid in understanding for developer. 
 
-<p align="center">
+
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/d3faa6a4-b29a-4e15-9a3e-b3ae2659976b "Fig. 2 Use Case Diagram")
-</p>
+
 
 Fig.2 shows the use case diagram which illustrates a list of key business actors, and their roles. The "Admin" or "Website Master" is responsible for content updates, user feedback review, and website performance monitoring. On the other hand, the "User" or "Visitor" refers to individuals who visit and engage with the website's features.
 
@@ -85,9 +85,9 @@ The "Browse Content" use case involves Users exploring website content. Users al
 
 C. **Database Design**
 
-<p align="center">
+
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/37b0ec84-890c-429e-a1b9-1f438b52e158 "Fig. 3 Entity Relationship Diagram")
-</p>
+
 
 Figure 3 displays the Entity Relationship Diagram (ERD) for the Muar-in-Motion website, involving 8 entities.
 
