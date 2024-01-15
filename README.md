@@ -120,6 +120,7 @@ Figure 3 displays the Entity Relationship Diagram (ERD) for the Muar-in-Motion w
 D. **System Output**
 
 **User's View**
+
 This section presents the user's views of Muar-in-Motion, encompassing the Homepage, Attraction Pages, Accommodation Pages, Transportation Pages, Event Pages, Forum Page, Search Features, Profile Page, Bookmark Page, and TDL Page. Screenshots of user’s views are shown in figures below.
 
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/c3ad3434-a9c0-4286-bbb4-58a4aec896a3 "Fig. 4 Homepage")
@@ -146,6 +147,7 @@ This section presents the user's views of Muar-in-Motion, encompassing the Homep
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/fcf731e9-5b14-4e7d-91d9-67c4e7ca8533 "Fig. 19 Search Result(2)")
 
 **Admin's View**
+
 This section displays the admin’s view of the Muar-in-Motion where it consists of Admin Dashboard, Homepage Editor, Attraction Editor, Accommodation Editor, Transportation Editor, Event Editor and Forum Editor. Screenshots of admin’s views are shown in figures below.
 
 ![image](https://github.com/alyah0011/Muar-in-Motion/assets/121216138/cf039cf1-ca49-4912-8d40-739c5c2764b4 "Fig. 20 Admin's Dashboard")
