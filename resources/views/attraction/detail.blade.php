@@ -371,6 +371,7 @@
                 </div>
                 <p>Category: {{ $attraction->att_cat }}</p>
                 <p>Contact Details: {{ $attraction->att_contact }}</p>
+                <p>Address: {{ $attraction->att_address }}</p>
 
             </div>
             <div class="content">

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('acco_contact')->nullable();
             $table->double('acco_lat')->nullable();
             $table->double('acco_longi')->nullable();
+            $table->string('acco_address', 500);
             $table->decimal('acco_average_rating', 3, 2)->default(0);
             $table->timestamps();
         });

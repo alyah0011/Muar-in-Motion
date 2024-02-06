@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('att_contact', 20)->nullable();
             $table->double('att_lat');
             $table->double('att_longi');
+            $table->string('att_address', 500);
             $table->decimal('average_rating', 3, 2)->default(0);
             $table->timestamps();
         });

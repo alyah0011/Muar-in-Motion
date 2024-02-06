@@ -76,8 +76,8 @@
                 <div class="partners">
                     <img src="/build/assets/icons/iium.png" alt="Partner 1 logo">
                     <img src="/build/assets/icons/gg.png" alt="Partner 2 logo">
-                    <img src="/build/assets/icons/muar tourism.png" alt="Partner 3 logo">
-                    <img src="/build/assets/icons/bhtravel.png" alt="Partner 4 logo">
+                    <img src="/build/assets/icons/mpm.png" alt="Partner 3 logo">
+                    <!-- <img src="/build/assets/icons/bhtravel.png" alt="Partner 4 logo"> -->
                 </div>
                 <a href="https://flagship.iium.edu.my/muara/">About Us</a> <!-- | -->
                 <!-- <a href="#">Terms & Conditions</a> -->

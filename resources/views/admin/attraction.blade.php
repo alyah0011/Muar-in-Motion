@@ -109,6 +109,9 @@
                                         Longitude
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Address
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Average Rating
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -154,6 +157,9 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $attraction->att_longi }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            {{ $attraction->att_address }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $attraction->average_rating }}
@@ -246,6 +252,12 @@
                                                         <div class="form-group">
                                                             <label for="att_longi">Longitude</label>
                                                             <input type="text" class="form-control" id="att_longi" name="att_longi" value="{{ $attraction->att_longi }}">
+                                                        </div>
+
+                                                        <!-- Longitude -->
+                                                        <div class="form-group">
+                                                            <label for="att_address">Address</label>
+                                                            <input type="text" class="form-control" id="att_address" name="att_address" value="{{ $attraction->att_address }}">
                                                         </div>
 
                                                         <!-- Average Rating -->
@@ -345,6 +357,12 @@
                         <div class="form-group">
                             <label for="att_longi">Longitude</label>
                             <input type="text" class="form-control" id="att_longi" name="att_longi">
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label for="att_address">Address</label>
+                            <input type="text" class="form-control" id="att_address" name="att_address">
                         </div>
 
                         <!-- Average Rating -->

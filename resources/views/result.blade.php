@@ -98,7 +98,7 @@
                         <a href="{{ url('/attractions/' . $result->att_id) }}"><strong>{{ $result->att_name }}</strong></a>
                         <p>{{ $result->att_sdesc }}</p>
                     </div>
-                <div>
+                </div>
                 @elseif ($result->type === 'accommodation')
                 <div class="item">
                     <img src="{{ url('/storage/' . $result->acco_img) }}" alt="Accommodation Image" class="rounded-image">
@@ -107,7 +107,7 @@
                         <a href="{{ url('/accommodation/' . $result->acco_id) }}"><strong>{{ $result->acco_name }}</strong></a>
                         <p>{{ $result->acco_sdesc }}</p>
                     </div>
-                <div>
+                </div>
                 @elseif ($result->type === 'transportation')
                     <!-- If trans_website is not empty, create a hyperlink with target="_blank" -->
                     @if (!empty($result->trans_website))
@@ -118,7 +118,7 @@
                             <a href="{{ $result->trans_website }}" target="_blank"><strong>{{ $result->trans_name }}</strong></a>
                             <p>{{ $result->trans_sdesc }}</p>
                         </div>
-                    <div>
+                    </div>
                     @else
                     <div class="item">
                         <img src="{{ url('/storage/' . $result->trans_img) }}" alt="Transportation Image" class="rounded-image">
@@ -127,7 +127,7 @@
                             <strong>{{ $result->trans_name }}</strong>
                             <p>{{ $result->trans_sdesc }}</p>
                         </div>
-                    <div>
+                    </div>
                     @endif
                 @endif
 

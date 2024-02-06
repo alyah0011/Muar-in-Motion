@@ -176,14 +176,30 @@
             Filter by date
             <div class="separator"></div>
                 <div class="checkbox-container">
-                    <input type="checkbox" id="jan-mar">
-                    <label for="jan-mar">Jan to Mar</label><br>
-                    <input type="checkbox" id="apr-jun">
-                    <label for="apr-jun">Apr to Jun</label><br>
-                    <input type="checkbox" id="jul-sep">
-                    <label for="jul-sep">Jul to Sep</label><br>
-                    <input type="checkbox" id="oct-dec">
-                    <label for="oct-dec">Oct to Dec</label><br>
+                    <input type="checkbox" id="jan">
+                    <label for="jan">January</label><br>
+                    <input type="checkbox" id="feb">
+                    <label for="feb">February</label><br>
+                    <input type="checkbox" id="mar">
+                    <label for="mar">March</label><br>
+                    <input type="checkbox" id="apr">
+                    <label for="apr">April</label><br>
+                    <input type="checkbox" id="may">
+                    <label for="may">May</label><br>
+                    <input type="checkbox" id="jun">
+                    <label for="jun">June</label><br>
+                    <input type="checkbox" id="jul">
+                    <label for="jul">July</label><br>
+                    <input type="checkbox" id="aug">
+                    <label for="aug">August</label><br>
+                    <input type="checkbox" id="sep">
+                    <label for="sep">September</label><br>
+                    <input type="checkbox" id="oct">
+                    <label for="oct">October</label><br>
+                    <input type="checkbox" id="nov">
+                    <label for="nov">November</label><br>
+                    <input type="checkbox" id="dec">
+                    <label for="dec">December</label><br>
                 </div>
         </div>
 
@@ -205,6 +221,8 @@
 <script>
     $(document).ready(function () {
         $('.checkbox-container input[type="checkbox"]').on('change', function () {
+            console.log('Checkbox changed');
+
             var selectedDates = [];
 
             // Get selected checkboxes
@@ -212,12 +230,15 @@
                 selectedDates.push($(this).attr('id'));
             });
 
+            console.log('Selected dates:', selectedDates); // Log selected dates
+
             // Make an AJAX request to fetch events based on selected date ranges
             $.ajax({
                 url: "{{ route('events.filter') }}",
                 type: "GET",
                 data: { dates: selectedDates },
                 success: function (data) {
+                    console.log('AJAX Response:', data);
                     // Update the content with the fetched events
                     updateEvents(data.html);
                 }

@@ -398,6 +398,7 @@
                 <p>Types: {{ $accommodation->acco_types }}</p>
                 <p>Website: {{ $accommodation->acco_website }}</p>
                 <p>Contact No.: {{ $accommodation->acco_contact }}</p>
+                <p>Address: {{ $accommodation->acco_address }}</p>
                 <p>From RM {{ $accommodation->acco_price_range ?? 'Not available' }}</p>
 
             </div>

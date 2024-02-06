@@ -113,6 +113,9 @@
                                         Longitude
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Address
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Average Rating
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -161,6 +164,9 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $accomodation->acco_longi }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            {{ $accomodation->acco_address }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $accomodation->acco_average_rating }}
@@ -252,6 +258,12 @@
                                                         <div class="form-group">
                                                             <label for="acco_longi">Longitude</label>
                                                             <input type="text" class="form-control" id="acco_longi" name="acco_longi" value="{{ $accomodation->acco_longi }}">
+                                                        </div>
+
+                                                        <!-- Address -->
+                                                        <div class="form-group">
+                                                            <label for="acco_address">Address</label>
+                                                            <input type="text" class="form-control" id="acco_address" name="acco_address" value="{{ $accomodation->acco_address }}">
                                                         </div>
 
                                                         <!-- Average Rating
@@ -347,6 +359,12 @@
                         <div class="form-group">
                             <label for="acco_longi">Longitude</label>
                             <input type="text" class="form-control" id="acco_longi" name="acco_longi">
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label for="acco_address">Address</label>
+                            <input type="text" class="form-control" id="acco_address" name="acco_address">
                         </div>
 
                         <!-- Average Rating -->

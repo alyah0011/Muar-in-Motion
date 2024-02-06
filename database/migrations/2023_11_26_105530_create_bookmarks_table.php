@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('bookmarks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('att_id')->constrained('attractions', 'att_id');
+            $table->foreignId('att_id')
+                    ->constrained('attractions', 'att_id')
+                    ->onDelete('cascade');
             $table->boolean('is_favourite')->default(false);
             $table->timestamps();
             
@@ -26,6 +28,11 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('bookmarks', function (Blueprint $table) {
+            $table->dropForeign(['att_id']);
+        });
+
         Schema::dropIfExists('bookmarks');
     }
+
 };

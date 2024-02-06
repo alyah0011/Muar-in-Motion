@@ -12,12 +12,14 @@ class Event extends Model
     protected $fillable = [
         'eve_img',
         'eve_name',
+        'eve_cat',
         'eve_sdesc',
         'eve_ldesc',
         'eve_date',
         'eve_time',
         'eve_lati',
         'eve_longi',
+        'eve_address',
         'eve_contact',
     ];
     

@@ -197,7 +197,9 @@
 
                 <p>Time: {{ $event->eve_time }}</p>
 
-                <p>Contact Details: {{ $event->eve_contact }}</p>
+                <p>Contact: {{ $event->eve_contact }}</p>
+
+                <p>Address: {{ $event->eve_address }}</p>
                 
             </div>
 

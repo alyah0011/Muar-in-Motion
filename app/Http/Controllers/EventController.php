@@ -39,33 +39,41 @@ class EventController extends Controller
             $filteredEvents = Event::where(function ($query) use ($selectedDates) {
                 foreach ($selectedDates as $date) {
                     switch ($date) {
-                        case 'jan-mar':
-                            $query->orWhere(function ($q) {
-                                $q->whereMonth('eve_date', 1)
-                                    ->orWhereMonth('eve_date', 2)
-                                    ->orWhereMonth('eve_date', 3);
-                            });
+                        case 'jan':
+                            $query->orWhereMonth('eve_date', 1);
                             break;
-                        case 'apr-jun':
-                            $query->orWhere(function ($q) {
-                                $q->whereMonth('eve_date', 4)
-                                    ->orWhereMonth('eve_date', 5)
-                                    ->orWhereMonth('eve_date', 6);
-                            });
+                        case 'feb':
+                            $query->orWhereMonth('eve_date', 2);
                             break;
-                        case 'jul-sep':
-                            $query->orWhere(function ($q) {
-                                $q->whereMonth('eve_date', 7)
-                                    ->orWhereMonth('eve_date', 8)
-                                    ->orWhereMonth('eve_date', 9);
-                            });
+                        case 'mar':
+                            $query->orWhereMonth('eve_date', 3);
                             break;
-                        case 'oct-dec':
-                            $query->orWhere(function ($q) {
-                                $q->whereMonth('eve_date', 10)
-                                    ->orWhereMonth('eve_date', 11)
-                                    ->orWhereMonth('eve_date', 12);
-                            });
+                        case 'apr':
+                            $query->orWhereMonth('eve_date', 4);
+                            break;
+                        case 'may':
+                            $query->orWhereMonth('eve_date', 5);
+                            break;
+                        case 'jun':
+                            $query->orWhereMonth('eve_date', 6);
+                            break;
+                        case 'jul':
+                            $query->orWhereMonth('eve_date', 7);
+                            break;
+                        case 'aug':
+                            $query->orWhereMonth('eve_date', 8);
+                            break;
+                        case 'sep':
+                            $query->orWhereMonth('eve_date', 9);
+                            break;
+                        case 'oct':
+                            $query->orWhereMonth('eve_date', 10);
+                            break;
+                        case 'nov':
+                            $query->orWhereMonth('eve_date', 11);
+                            break;
+                        case 'dec':
+                            $query->orWhereMonth('eve_date', 12);
                             break;
                         default:
                             // Handle other cases or provide a default behavior

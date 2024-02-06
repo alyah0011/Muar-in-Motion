@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('att_id');
+            $table->unsignedBigInteger('att_id')
+                    ->constrained()
+                    ->onDelete('cascade');
             $table->unsignedBigInteger('user_id'); // Foreign key referencing users table
             // $table->foreign('att_id')->references('att_id')->on('attractions')->onDelete('cascade');
             // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -28,6 +30,11 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('reviews', function (Blueprint $table) {
+            $table->dropForeign(['att_id']);
+        });
+
         Schema::dropIfExists('reviews');
     }
+
 };

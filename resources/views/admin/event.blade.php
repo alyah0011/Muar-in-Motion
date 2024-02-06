@@ -82,6 +82,9 @@
                                         Image
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Category
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Short Description
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -101,6 +104,9 @@
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Longitude
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Address
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Created At
@@ -125,6 +131,9 @@
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $event->eve_img }}
                                         </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            {{ $event->eve_cat }}
+                                        </td>
                                         <td class="px-6 py-4 whitespace-nowrap content">
                                             {{ $event->eve_sdesc }}
                                         </td>
@@ -145,6 +154,9 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $event->eve_longi }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            {{ $event->eve_address }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             {{ $event->created_at }}
@@ -188,6 +200,12 @@
                                                             <img src="{{ asset('storage/event/' . $event->eve_img) }}" alt="Event Image" class="mt-2" style="max-width: 200px;">
                                                         </div>
 
+                                                        <!-- Category -->
+                                                        <div class="form-group">
+                                                            <label for="eve_cat">Short Description</label>
+                                                            <input type="text" class="form-control" id="eve_cat" name="eve_cat" value="{{ $event->eve_cat }}">
+                                                        </div>
+
                                                         <!-- Short Description -->
                                                         <div class="form-group">
                                                             <label for="eve_sdesc">Short Description</label>
@@ -226,6 +244,12 @@
                                                         <div class="form-group">
                                                             <label for="eve_longi">Longitude</label>
                                                             <input type="text" class="form-control" id="eve_longi" name="eve_longi" value="{{ $event->eve_longi }}">
+                                                        </div>
+
+                                                        <!-- Address -->
+                                                        <div class="form-group">
+                                                            <label for="eve_address">Address</label>
+                                                            <input type="text" class="form-control" id="eve_address" name="eve_address" value="{{ $event->eve_address }}">
                                                         </div>
                                                                                     
                                                         <button type="submit" class="btn btn-primary">Update Event</button>
@@ -269,6 +293,12 @@
                             <input type="file" class="form-control-file" id="eve_img" name="eve_img">
                         </div>
 
+                        <!-- Category -->
+                        <div class="form-group">
+                            <label for="eve_cat">Category</label>
+                            <input type="text" class="form-control" id="eve_cat" name="eve_cat">
+                        </div>
+
                         <!-- Short Description -->
                         <div class="form-group">
                             <label for="eve_sdesc">Short Description</label>
@@ -309,6 +339,12 @@
                         <div class="form-group">
                             <label for="eve_longi">Longitude</label>
                             <input type="text" class="form-control" id="eve_longi" name="eve_longi">
+                        </div>
+
+                        <!-- Address -->
+                         <div class="form-group">
+                            <label for="eve_address">Address</label>
+                            <input type="text" class="form-control" id="eve_address" name="eve_address">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Add Event</button>

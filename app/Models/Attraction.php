@@ -21,6 +21,7 @@ class Attraction extends Model
         'att_contact',
         'att_lat',
         'att_longi',
+        'att_address',
         'average_rating', // Add 'average_rating' to the fillable array
     ];
 
