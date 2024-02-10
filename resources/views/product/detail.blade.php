@@ -394,17 +394,17 @@
 
 <x-app-layout>
     <div class="banner">
-        @if($accommodation->acco_img)
+        @if($product->lp_img)
             <div class="overlay"></div>
-            <img src="{{ url('storage/' . $accommodation->acco_img) }}" alt="Accommodation Image">
+            <img src="{{ url('storage/' . $product->lp_img) }}" alt="Product Image">
         @endif
 
         <h2 class="banner-title">
-            {{ $accommodation->acco_name }}
+            {{ $product->lp_name }}
         </h2>
 
         <p class="banner-desc">
-            {{ $accommodation->acco_sdesc }}
+            {{ $product->lp_sdesc }}
         </p>
     </div>
 
@@ -413,8 +413,7 @@
         <br><br>
 
         <ul class="breadcrumb">
-            <li><a href="{{ route('ant.main') }}" style="color: blue; text-decoration: underline;">Accommodation & Transportation</a></li>
-            <li><a href="{{ route('accommodation.index') }}" style="color: blue; text-decoration: underline;">Accomodation</a></li>
+            <li><a href="{{ route('product.product') }}" style="color: blue; text-decoration: underline;">Product</a></li>
             <li>Detail</li>
         </ul>
 
@@ -422,25 +421,25 @@
 
         <div class="flex-container">
             <div class="square">
-                <p><strong>Accommodation details</strong></p>
+                <p><strong>Product details</strong></p>
                 <hr>
-                <div class="attraction-rating">
+                <!-- <div class="attraction-rating">
                     <img src="/build/assets/icons/star.svg" alt="Icon Description" style="width: 20px; height: 20px;">
-                    {{ $accommodation->acco_average_rating }}
-                </div>
-                <p>Types: {{ $accommodation->acco_types }}</p>
-                <p>Website: {{ $accommodation->acco_website }}</p>
-                <p>Contact No.: {{ $accommodation->acco_contact }}</p>
-                <p>Address: {{ $accommodation->acco_address }}</p>
-                <p>From RM {{ $accommodation->acco_price_range ?? 'Not available' }}</p>
+                    {{ $product->lp_average_rating }}
+                </div> -->
+                <p>Types: {{ $product->lp_type }}</p>
+                <p><a href="{{ $product->lp_website }}" style="color: blue; text-decoration: underline;">Buy Here</a></p>
+                <p>{{ $product->lp_contact }}</p>
+                <p>{{ $product->lp_address }}</p>
+                <p>RM {{ $product->lp_price ?? 'Not available' }}</p>
 
             </div>
             <div class="content">
                 <h2 class="title">
-                    {{ $accommodation->acco_name }}
+                    {{ $product->lp_name }}
                 </h2>
                 <br>
-                <p class="ldesc"> {{ $accommodation->acco_ldesc }} </p>
+                <p class="ldesc"> {{ $product->lp_ldesc }} </p>
             </div>
         </div>
 
@@ -450,67 +449,9 @@
 
         <br>
 
-        <div class="submission">
-            <h3>Leave a Review</h3>
+        <!-- Take review part from accommodation -->
 
-            <form action="{{ route('accoreviews.store', $accommodation->acco_id) }}" method="post">
-                @csrf
-                
-                    <label for="rating">Rating:</label>
-                    <br>
-                    <div class="star-rating">
-                        <input type="radio" id="star5" name="rev_rating" value="5"><label for="star5"></label>
-                        <input type="radio" id="star4" name="rev_rating" value="4"><label for="star4"></label>
-                        <input type="radio" id="star3" name="rev_rating" value="3"><label for="star3"></label>
-                        <input type="radio" id="star2" name="rev_rating" value="2"><label for="star2"></label>
-                        <input type="radio" id="star1" name="rev_rating" value="1"><label for="star1"></label>
-                    </div>
-                    <br>
-
-                    <label for="comment">Comment:</label>
-                    <br>
-                    <textarea name="rev_comment" rows="4" cols="50" required></textarea><br>
-
-                    <div class="btt">
-
-                        <button type="submit">Submit</button>
-                
-                    </div>
-                
-            </form>
-
-        </div>
-
-        <div class="reviews">
-            <h3>Reviews</h3>
-            @foreach($accommodation->reviews as $accoreview)
-                <div class="review">
-                    <div class="container">
-                    <img src="{{ $accoreview->user->profile_photo_url }}" alt="{{ $accoreview->user->name }}" class="rounded-full h-10 w-10 object-cover">
-
-
-                        <p><strong>{{ $accoreview->user->name }}</strong> </p>
-
-                        <div class="time">
-                            <p>{{ $accoreview->created_at->format('F j, Y H:i A') }}</p>
-                        </div>
-
-                    </div>
-
-                    <div class="result">
-                        <div class="stars">
-                            @for ($i = 1; $i <= $accoreview->rev_rating; $i++)
-                                <img src="/build/assets/icons/star.svg" alt="Star" class="star-icon">
-                            @endfor
-                        </div>
-
-                        <p>{{ $accoreview->rev_comment }}</p>
-                    </div>
-
-                </div>
-                <hr>
-            @endforeach
-        </div>
+        
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -518,8 +459,8 @@
     <script>
         
         document.addEventListener('DOMContentLoaded', (event) => {
-            let attractionLat = {{ $accommodation->acco_lat }};
-            let attractionLongi = {{ $accommodation->acco_longi }};
+            let attractionLat = {{ $product->lp_lat }};
+            let attractionLongi = {{ $product->lp_longi }};
 
             let mapOptions = {
                 center: [attractionLat, attractionLongi],

@@ -40,7 +40,7 @@
         margin-top: 120px;
     }
 
-    .section2 h2{
+    .section2 h2 {
         color: #0D0E10;
         font-size: 3vw;
         font-style: normal;
@@ -125,6 +125,49 @@
         justify-content: space-between;
     }
 
+    .product-btn {
+        width: 25%;
+        padding: 10px;
+        background: rgba(19, 16, 163, 0.00);
+        border: 2px solid #000;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #000; /* Adjust text color */
+        font-weight: bold;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-left: 85%;
+    }
+
+    .section3 h2 {
+        color: #0D0E10;
+        font-size: 5vw;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-shadow: 5px 5px 5px #777;
+    }
+
+    .product-btn:hover {
+        background-color: rgba(19, 16, 163, 0.2); /* Adjust hover background color */
+    }
+
+    .section3 {
+        display: flex;
+        align-items: center;
+        padding: 50px;
+        margin-top: 80px;
+    }
+
+    .s3cont {
+        width: 50%;
+    }
+
+
 </style>
 
 <x-app-layout>
@@ -177,6 +220,32 @@
 
 
             </div>
+        </div>
+
+        <div class="section3">
+
+            <img src="/build/assets/productsect.png" alt="Product Sect" style="width: 40%; height: auto;">
+            
+            <div class="s3cont">
+                <h2>
+                    {{ __('#SUPPORTLOCAL') }}
+                </h2>
+
+                <br><br>
+
+                <p> 
+                    From delectable delicacies to exquisite handicrafts, Muar offers a treasure trove of unique creations waiting to be 
+                    discovered.  Dive into a realm of local pride, heritage, and innovation, and experience Muar's vibrant spirit like 
+                    never before.
+                </p>
+
+                <br>
+
+                <a href="{{ route('product.product') }}" class="product-btn">
+                    <span>See Products</span>
+                </a>
+            </div>
+
         </div>
 
 

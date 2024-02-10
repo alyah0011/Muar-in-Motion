@@ -13,6 +13,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TodoListController;
 use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\LocalProductController;
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminHomepageController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\AdminAccommodationController;
 use App\Http\Controllers\AdminTransportationController;
 use App\Http\Controllers\AdminEventController;
 use App\Http\Controllers\AdminForumController;
+use App\Http\Controllers\AdminProductController;
 
 use App\Models\Accomodation; 
 use App\Models\Transportation; 
@@ -50,6 +52,11 @@ Route::get('/attraction/category', function () {
         return view('attraction.category');
 })->name('category');
 Route::get('/attractions/{att_id}', [AttractionController::class, 'show'])->name('attraction.detail');
+
+Route::get('/products', [LocalProductController::class, 'index'])->name('product.product');
+Route::get('/products/filter', [LocalProductController::class, 'filterProducts'])->name('products.filter');
+Route::get('/products/{lp_id}', [LocalProductController::class, 'show'])->name('product.detail');
+
 
 Route::get('/events', function () {
         return view('event.main');
@@ -159,6 +166,14 @@ Route::middleware([
         Route::get('/forum', [AdminForumController::class, 'index'])->name('admin.forum.index');
         Route::put('/admin/forum/{id}/update-status', [AdminForumController::class, 'updateStatus'])->name('admin.forum.update-status');
         Route::delete('/forum/{id}/destroy', [AdminForumController::class, 'destroy'])->name('admin.forum.destroy');
+
+        Route::get('/local-products', [AdminProductController::class, 'index'])->name('admin.product.index');
+        Route::get('/local-products/create', [AdminProductController::class, 'create'])->name('admin.product.create');
+        Route::post('/local-products/store', [AdminProductController::class, 'store'])->name('admin.product.store');
+        Route::get('/local-products/{id}/edit', [AdminProductController::class, 'edit'])->name('admin.product.edit');
+        Route::put('/local-products/{id}/update', [AdminProductController::class, 'update'])->name('admin.product.update');
+        Route::delete('/local-products/{id}/destroy', [AdminProductController::class, 'destroy'])->name('admin.product.destroy');
+
     });
     
 });

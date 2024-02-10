@@ -95,6 +95,13 @@
             </a>  
         </div>  
 
+        <div class="mt-4 button-container">
+            <a href="{{ route('admin.product.index') }}" class="btn btn-primary rounded-square">
+                <img src="/build/assets/adminicons/product.png" alt="Product Icon" class="icon">
+                Product
+            </a> 
+        </div>  
+
     </div>
 
 </x-app-layout>

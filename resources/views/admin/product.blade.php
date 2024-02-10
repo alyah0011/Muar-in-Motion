@@ -14,16 +14,22 @@
         }
     </script>
 
+
     <style>
+        .long-text-cell {
+            word-wrap: break-word;
+            max-width: 500px; /* Set a maximum width for better readability */
+        }
+        
+        .btn-primary {
+            background-color: #007bff !important; /* Set your desired background color */
+        }
+
         .content {
             white-space: nowrap;
             max-width: 400px;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
-
-        .btn-primary {
-            background-color: #007bff !important; /* Set your desired background color */
         }
 
         #pageSelection {
@@ -35,20 +41,20 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-    </style>
 
+    </style>
 </head>
 
 
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Admin Event') }}
+            {{ __('Admin Product') }} 
         </h2>
 
         <br>
         
-        <p>Edit information on event here</p>
+        <p>Edit information on Product here</p>
     </x-slot>
 
     <div>
@@ -63,11 +69,12 @@
             <option value="{{ route('admin.product.index') }}" {{ Request::route()->getName() == 'admin.product.index' ? 'selected' : '' }}>Product</option>
         </select>
     </div>
+    
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-gray-100 overflow-hidden shadow-sm sm:rounded-lg p-4">
-                <button class="btn btn-success" data-toggle="modal" data-target="#addEventModal">Add Event</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#addaccomodationModal">Add Product</button>
                 <div class="p-6 bg-gray-100 border-b border-gray-300">
                     <div class="table-responsive">
                         <table class="min-w-full divide-y divide-gray-200 " >
@@ -83,7 +90,7 @@
                                         Image
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Category
+                                        Types
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Short Description
@@ -92,10 +99,10 @@
                                         Long Description
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Event Date
+                                        Price 
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Event Time
+                                        Website
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Contact
@@ -121,139 +128,146 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                @foreach($events as $event)
+                                @foreach($localProducts as $product)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_id }}
+                                            {{ $product->lp_id }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_name }}
+                                            {{ $product->lp_name }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_img }}
+                                            {{ $product->lp_img }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_cat }}
+                                            {{ $product->lp_type }}
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap content">
-                                            {{ $event->eve_sdesc }}
+                                        <td class="px-6 py-4 whitespace-nowrap long-text-cell content">
+                                            {{ $product->lp_sdesc }}
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap content">
-                                            {{ $event->eve_ldesc }}
+                                        <td class="px-6 py-4 whitespace-nowrap long-text-cell content">
+                                            {{ $product->lp_ldesc }}
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_date }}
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_time }}
+                                        <td class="px-6 py-4 whitespace-nowrap long-text-cell content">
+                                            {{ $product->lp_price }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_contact }}
+                                            {{ $product->lp_website }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_lati }}
+                                            {{ $product->lp_contact }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_longi }}
+                                            {{ $product->lp_lat }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->eve_address }}
+                                            {{ $product->lp_longi }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->created_at }}
+                                            {{ $product->lp_address }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $event->updated_at }}
+                                            {{ $product->created_at }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            {{ $product->updated_at }}
                                         </td>
                                         <td>
-                                            <a href="#" class="text-blue-500" data-toggle="modal" data-target="#editEventModal{{ $event->eve_id }}">Edit</a>
-                                            <form action="{{ route('admin.event.destroy', $event->eve_id) }}" method="POST" class="inline">
+                                            <a href="#" class="text-blue-500" data-toggle="modal" data-target="#editAccommodationModal{{ $product->lp_id }}">Edit</a>
+                                            <form action="{{ route('admin.product.destroy', $product->lp_id) }}" method="POST" class="inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="text-red-500" onclick="return confirm('Are you sure?')">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
-                                    <!-- Edit Event Modal -->
-                                    <div class="modal fade" id="editEventModal{{ $event->eve_id }}" tabindex="-1" role="dialog" aria-labelledby="editEventModalLabel{{ $event->eve_id }}" aria-hidden="true">
+                                    <!-- Edit Accommodation Modal -->
+                                    <div class="modal fade" id="editAccommodationModal{{ $product->lp_id }}" tabindex="-1" role="dialog" aria-labelledby="editAccommodationModalLabel{{ $product->lp_id }}" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="editEventModalLabel{{ $event->eve_id }}">Edit Event</h5>
+                                                    <h5 class="modal-title" id="editAccommodationModalLabel{{ $product->lp_id }}">Edit product</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <!-- Your edit form goes here -->
-                                                    <form action="{{ route('admin.event.update', ['id' => $event->eve_id]) }}" method="post" enctype="multipart/form-data">
+                                                    <form action="{{ route('admin.product.update', ['id' => $product->lp_id]) }}" method="post" enctype="multipart/form-data">
                                                         @csrf
                                                         @method('PUT')
                                                        
                                                         <div class="form-group">
-                                                            <label for="eve_name">Event Name</label>
-                                                            <input type="text" class="form-control" id="eve_name" name="eve_name" value="{{ $event->eve_name }}" required>
+                                                            <label for="lp_name">Product Name</label>
+                                                            <input type="text" class="form-control" id="lp_name" name="lp_name" value="{{ $product->lp_name }}" required>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label for="eve_img">Event Image</label>
-                                                            <input type="file" class="form-control-file" id="eve_img" name="eve_img">
-                                                            <img src="{{ asset('storage/event/' . $event->eve_img) }}" alt="Event Image" class="mt-2" style="max-width: 200px;">
+                                                            <label for="lp_img">Product Image</label>
+                                                            <input type="file" class="form-control-file" id="lp_img" name="lp_img">
+                                                            <img src="{{ asset('storage/product/' . $product->lp_img) }}" alt="Product Image" class="mt-2" style="max-width: 200px;">
                                                         </div>
-
-                                                        <!-- Category -->
+                                                       
                                                         <div class="form-group">
-                                                            <label for="eve_cat">Short Description</label>
-                                                            <input type="text" class="form-control" id="eve_cat" name="eve_cat" value="{{ $event->eve_cat }}">
+                                                            <label for="lp_type">Product Type</label>
+                                                            <input type="text" class="form-control" id="lp_type" name="lp_type" value="{{ $product->lp_type }}">
                                                         </div>
 
                                                         <!-- Short Description -->
                                                         <div class="form-group">
-                                                            <label for="eve_sdesc">Short Description</label>
-                                                            <input type="text" class="form-control" id="eve_sdesc" name="eve_sdesc" value="{{ $event->eve_sdesc }}">
+                                                            <label for="lp_sdesc">Short Description</label>
+                                                            <input type="text" class="form-control" id="lp_sdesc" name="lp_sdesc"  value="{{ $product->lp_sdesc }}" maxlength="200">
                                                         </div>
 
                                                         <!-- Long Description -->
                                                         <div class="form-group">
-                                                            <label for="eve_ldesc">Long Description</label>
-                                                            <textarea class="form-control" id="eve_ldesc" name="eve_ldesc">{{ $event->eve_ldesc }}</textarea>
+                                                            <label for="lp_ldesc">Long Description</label>
+                                                            <textarea class="form-control" id="lp_ldesc" name="lp_ldesc" maxlength="1800">{{ $product->lp_ldesc }}</textarea>
                                                         </div>
 
+                                                        <!-- Price Range -->
                                                         <div class="form-group">
-                                                            <label for="eve_date">Event Date</label>
-                                                            <input type="date" class="form-control" id="eve_date" name="eve_date" value="{{ $event->eve_date }}">
+                                                            <label for="lp_price">Price</label>
+                                                            <input type="text" class="form-control" id="lp_price" name="lp_price" value="{{ $product->lp_price }}" step="1">
                                                         </div>
 
+                                                        <!-- Website -->
                                                         <div class="form-group">
-                                                            <label for="eve_time">Event Time</label>
-                                                            <input type="text" class="form-control" id="eve_time" name="eve_time" value="{{ $event->eve_time }}">
+                                                            <label for="lp_website">Website</label>
+                                                            <input type="text" class="form-control" id="lp_website" name="lp_website" value="{{ $product->lp_website }}">
                                                         </div>
 
                                                         <!-- Contact -->
                                                         <div class="form-group">
-                                                            <label for="eve_contact">Contact</label>
-                                                            <input type="text" class="form-control" id="eve_contact" name="eve_contact" value="{{ $event->eve_contact }}">
+                                                            <label for="lp_contact">Contact</label>
+                                                            <input type="text" class="form-control" id="lp_contact" name="lp_contact" value="{{ $product->lp_contact }}">
                                                         </div>
 
                                                         <!-- Latitude -->
                                                         <div class="form-group">
-                                                            <label for="eve_lati">Latitude</label>
-                                                            <input type="text" class="form-control" id="eve_lati" name="eve_lati" value="{{ $event->eve_lati }}">
+                                                            <label for="lp_lat">Latitude</label>
+                                                            <input type="text" class="form-control" id="lp_lat" name="lp_lat" value="{{ $product->lp_lat }}">
                                                         </div>
 
                                                         <!-- Longitude -->
                                                         <div class="form-group">
-                                                            <label for="eve_longi">Longitude</label>
-                                                            <input type="text" class="form-control" id="eve_longi" name="eve_longi" value="{{ $event->eve_longi }}">
+                                                            <label for="lp_longi">Longitude</label>
+                                                            <input type="text" class="form-control" id="lp_longi" name="lp_longi" value="{{ $product->lp_longi }}">
                                                         </div>
 
                                                         <!-- Address -->
                                                         <div class="form-group">
-                                                            <label for="eve_address">Address</label>
-                                                            <input type="text" class="form-control" id="eve_address" name="eve_address" value="{{ $event->eve_address }}">
+                                                            <label for="lp_address">Address</label>
+                                                            <input type="text" class="form-control" id="lp_address" name="lp_address" value="{{ $product->lp_address }}">
                                                         </div>
+
+                                                        <!-- Average Rating
+                                                        <div class="form-group">
+                                                            <label for="lp_average_rating">Average Rating</label>
+                                                            <input type="text" class="form-control" id="lp_average_rating" name="lp_average_rating" value="{{ $product->lp_average_rating }}">
+                                                        </div> -->
                                                                                     
-                                                        <button type="submit" class="btn btn-primary">Update Event</button>
+                                                        <button type="submit" class="btn btn-primary">Update product</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -268,87 +282,92 @@
         </div>
     </div>
 
-     <!-- Add Event Modal -->
-     <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModalLabel" aria-hidden="true">
+     <!-- Add product Modal -->
+     <div class="modal fade" id="addAccomodationModal" tabindex="-1" role="dialog" aria-labelledby="addAccomodationModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addEventModalLabel">Add Event</h5>
+                    <h5 class="modal-title" id="addAccomodationModalLabel">Add Product</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <!-- Your add form goes here -->
-                    <form action="{{ route('admin.event.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <!-- Event Name -->
+                        <!-- product Name -->
                         <div class="form-group">
-                            <label for="eve_name">Event Name</label>
-                            <input type="text" class="form-control" id="eve_name" name="eve_name" required>
+                            <label for="lp_name">Product Name</label>
+                            <input type="text" class="form-control" id="lp_name" name="lp_name" required>
                         </div>
 
-                        <!-- Event Image -->
+                        <!-- product Image -->
                         <div class="form-group">
-                            <label for="eve_img">Event Image</label>
-                            <input type="file" class="form-control-file" id="eve_img" name="eve_img">
+                            <label for="lp_img">Product Image</label>
+                            <input type="file" class="form-control-file" id="lp_img" name="lp_img">
                         </div>
 
-                        <!-- Category -->
+                        <!-- product Category -->
                         <div class="form-group">
-                            <label for="eve_cat">Category</label>
-                            <input type="text" class="form-control" id="eve_cat" name="eve_cat">
+                            <label for="lp_type">Product Type</label>
+                            <input type="text" class="form-control" id="lp_type" name="lp_type">
                         </div>
 
                         <!-- Short Description -->
                         <div class="form-group">
-                            <label for="eve_sdesc">Short Description</label>
-                            <input type="text" class="form-control" id="eve_sdesc" name="eve_sdesc">
+                            <label for="lp_sdesc">Short Description</label>
+                            <input type="text" class="form-control" id="lp_sdesc" name="lp_sdesc" maxlength="200">
                         </div>
 
                         <!-- Long Description -->
                         <div class="form-group">
-                            <label for="eve_ldesc">Long Description</label>
-                            <textarea class="form-control" id="eve_ldesc" name="eve_ldesc"></textarea>
+                            <label for="lp_ldesc">Long Description</label>
+                            <textarea class="form-control" id="lp_ldesc" name="lp_ldesc" maxlength="1800"></textarea>
                         </div>
 
-                        <!-- Event Date -->
+                        <!-- Price Range -->
                         <div class="form-group">
-                            <label for="eve_date">Event Date</label>
-                            <input type="date" class="form-control" id="eve_date" name="eve_date">
+                            <label for="lp_price_range">Price</label>
+                            <input type="text" class="form-control" id="lp_price_range" name="lp_price_range" step="1">
                         </div>
 
-                        <!-- Event Time -->
+                        <!-- Website -->
                         <div class="form-group">
-                            <label for="eve_time">Event Time</label>
-                            <input type="text" class="form-control" id="eve_time" name="eve_time">
+                            <label for="lp_website">Website</label>
+                            <input type="text" class="form-control" id="lp_website" name="lp_website">
                         </div>
 
                         <!-- Contact -->
                         <div class="form-group">
-                            <label for="eve_contact">Contact</label>
-                            <input type="text" class="form-control" id="eve_contact" name="eve_contact">
+                            <label for="lp_contact">Contact</label>
+                            <input type="text" class="form-control" id="lp_contact" name="lp_contact">
                         </div>
 
                         <!-- Latitude -->
                         <div class="form-group">
-                            <label for="eve_lati">Latitude</label>
-                            <input type="text" class="form-control" id="eve_lati" name="eve_lati">
+                            <label for="lp_lat">Latitude</label>
+                            <input type="text" class="form-control" id="lp_lat" name="lp_lat">
                         </div>
 
                         <!-- Longitude -->
                         <div class="form-group">
-                            <label for="eve_longi">Longitude</label>
-                            <input type="text" class="form-control" id="eve_longi" name="eve_longi">
+                            <label for="lp_longi">Longitude</label>
+                            <input type="text" class="form-control" id="lp_longi" name="lp_longi">
                         </div>
 
                         <!-- Address -->
-                         <div class="form-group">
-                            <label for="eve_address">Address</label>
-                            <input type="text" class="form-control" id="eve_address" name="eve_address">
+                        <div class="form-group">
+                            <label for="lp_address">Address</label>
+                            <input type="text" class="form-control" id="lp_address" name="lp_address">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Add Event</button>
+                        <!-- Average Rating -->
+                        <!-- <div class="form-group">
+                            <label for="lp_average_rating">Average Rating</label>
+                            <input type="text" class="form-control" id="lp_average_rating" name="lp_average_rating">
+                        </div> -->
+                        <button type="submit" class="btn btn-primary">Add Product</button>
                     </form>
                 </div>
             </div>

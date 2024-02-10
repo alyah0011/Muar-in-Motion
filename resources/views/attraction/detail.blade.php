@@ -275,6 +275,40 @@
         margin-left: 5px;
     }
 
+    .star-rating {
+    display: inline-block;
+    }
+
+    .star-rating input[type="radio"] {
+        display: none;
+    }
+
+    .star-rating label {
+        font-size: 25px;
+        color: #aaa;
+        float: right;
+    }
+
+    .star-rating input[type="radio"] + label:before {
+        content: "\2605";
+        margin-right: 5px;
+    }
+
+    .star-rating input[type="radio"]:checked + label:before {
+        color: #f8ce0b;
+    }
+
+    .star-rating input[type="radio"]:checked ~ label:before {
+        color: #f8ce0b;
+    }
+
+    .star-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block; /* Display the stars horizontally */
+    }
+
+
     @media only screen and (max-width: 768px) {
         .banner-title {
             font-size: 5vw; /* Adjust the font size for smaller screens */
@@ -408,7 +442,14 @@
                 
                     <label for="rating">Rating:</label>
                     <br>
-                    <input type="number" name="rev_rating" min="1" max="5" required><br>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rev_rating" value="5"><label for="star5"></label>
+                        <input type="radio" id="star4" name="rev_rating" value="4"><label for="star4"></label>
+                        <input type="radio" id="star3" name="rev_rating" value="3"><label for="star3"></label>
+                        <input type="radio" id="star2" name="rev_rating" value="2"><label for="star2"></label>
+                        <input type="radio" id="star1" name="rev_rating" value="1"><label for="star1"></label>
+                    </div>
+                    <br>
 
                     <label for="comment">Comment:</label>
                     <br>
@@ -440,9 +481,16 @@
 
                     </div>
                     <div class="result">
-                    <p><strong>Rating:</strong> {{ $review->rev_rating }}</p>
-                    <p>{{ $review->rev_comment }}</p>
+
+                        <div class="stars">
+                            @for ($i = 1; $i <= $review->rev_rating; $i++)
+                                <img src="/build/assets/icons/star.svg" alt="Star" class="star-icon">
+                            @endfor
+                        </div>
+
+                        <p>{{ $review->rev_comment }}</p>
                     </div>
+
 
                 </div>
                 <hr>
