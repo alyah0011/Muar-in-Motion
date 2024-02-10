@@ -170,12 +170,14 @@
             Category
             <div class="separator"></div>
                 <div class="checkbox-container">
-                    <input type="checkbox" id="fashion">
-                    <label for="fashion">Fashion</label><br>
-                    <input type="checkbox" id="confectionary">
-                    <label for="confectionary">Confectionary</label><br>
-                    <input type="checkbox" id="handicraft">
-                    <label for="handicraft">Handicraft</label><br>
+                <input type="checkbox" id="fashion">
+                <label for="fashion">Fashion</label><br>
+                <input type="checkbox" id="food"> <!-- Change from "Confectionary" to "Food" -->
+                <label for="food">Food</label><br>
+                <input type="checkbox" id="handicraft">
+                <label for="handicraft">Handicraft</label><br>
+                <input type="checkbox" id="other"> <!-- Add "Other" filter -->
+                <label for="other">Other</label><br>
                 </div>
         </div>
 
