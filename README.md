@@ -323,4 +323,3 @@ In addressing the lack of smart tourism utilization in Muar region, the developm
 
 
 
->>>>>>> e91840e433eac93214fb1e5bb66cf555d0b5a176
