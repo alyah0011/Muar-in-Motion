@@ -44,6 +44,7 @@ class LocalProductController extends Controller
             // Return a response with an error message (for debugging)
             return response()->json(['error' => $e->getMessage()], 500);
         }
+        
     }
 
 }
