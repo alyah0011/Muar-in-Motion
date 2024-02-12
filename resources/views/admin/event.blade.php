@@ -203,7 +203,7 @@
 
                                                         <!-- Category -->
                                                         <div class="form-group">
-                                                            <label for="eve_cat">Short Description</label>
+                                                            <label for="eve_cat">Category</label>
                                                             <input type="text" class="form-control" id="eve_cat" name="eve_cat" value="{{ $event->eve_cat }}">
                                                         </div>
 
