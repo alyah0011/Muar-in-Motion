@@ -510,7 +510,7 @@
             <div class="c1" onclick="window.location.href='{{ route('attraction') }}';">
                 <strong>Attraction</strong>
 
-                <p>Explore abundant of places you can visit in Sabak Awor</p>
+                <p>Explore abundant of places you can visit in Muar</p>
 
                 <a href="{{ route('attraction') }}"> See more</a>
             </div>
@@ -518,7 +518,7 @@
             <div class="c2" onclick="window.location.href='{{ route('ant.main') }}';">
                 <strong>Accomodation & Transportation</strong>
 
-                <p>Explore abundant of places you can visit in Sabak Awor</p>
+                <p>Explore abundant of places you can visit in Muar</p>
 
                 <a href="{{ route('ant.main') }}"> See more</a>
             </div>
@@ -526,7 +526,7 @@
             <div class="c3" onclick="window.location.href='{{ route('events') }}';">
                 <strong>Event</strong>
 
-                <p>Explore abundant of places you can visit in Sabak Awor</p>
+                <p>Explore abundant of places you can visit in Muar</p>
 
                 <a href="{{ route('events') }}"> See more</a>
             </div>

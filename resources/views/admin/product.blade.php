@@ -328,8 +328,8 @@
 
                         <!-- Price Range -->
                         <div class="form-group">
-                            <label for="lp_price_range">Price</label>
-                            <input type="text" class="form-control" id="lp_price_range" name="lp_price_range" step="1">
+                            <label for="lp_price">Price</label>
+                            <input type="text" class="form-control" id="lp_price" name="lp_price" step="1">
                         </div>
 
                         <!-- Website -->

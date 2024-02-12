@@ -12,6 +12,12 @@
                 <a href="{{ route('product.detail', $product->lp_id) }}">{{ $product->lp_name }}</a>
             </div>
 
+            @if($product->lp_price)
+                <div class="product-price">
+                    <strong>RM {{ $product->lp_price }}</strong>
+                </div>
+            @endif
+
             <div class="product-type">
                 <p>Type: {{ $product->lp_type }}</p>
             </div>
@@ -20,11 +26,7 @@
                 <p>{{ $product->lp_sdesc }}</p>
             </div>
 
-            @if($product->lp_price)
-                <div class="product-price">
-                    <p>Price: {{ $product->lp_price }}</p>
-                </div>
-            @endif
+            
         </div>
     </div>
 </div>

@@ -27,34 +27,58 @@ class LocalProductController extends Controller
     {
         try {
             $selectedCategories = $request->input('categories');
-    
+
             // Check if $selectedCategories is null, and set it to an empty array if it is
             $selectedCategories = $selectedCategories ?? [];
-    
-            // Add "Other" filter if selected
-            if (in_array('other', $selectedCategories)) {
-                // Define the excluded categories
-                $excludedCategories = ['Food', 'Fashion', 'Handicraft'];
-    
-                // Query products excluding the specified categories
-                $filteredProducts = LocalProduct::whereNotIn('lp_type', $excludedCategories)->get();
-            } else {
-                // Query products based on selected categories
-                $filteredProducts = LocalProduct::whereIn('lp_type', $selectedCategories)->get();
+
+            switch (true) {
+                case empty($selectedCategories):
+                    // If no checkboxes are ticked, show all products
+                    $filteredProducts = LocalProduct::all();
+                    break;
+
+                case in_array('food', $selectedCategories):
+                    // Query products including only the food category
+                    $filteredProducts = LocalProduct::where('lp_type', 'Food')->get();
+                    break;
+
+                case in_array('handicraft', $selectedCategories):
+                    // Query products including only the handicraft category
+                    $filteredProducts = LocalProduct::where('lp_type', 'Handicraft')->get();
+                    break;
+
+                case in_array('fashion', $selectedCategories):
+                    // Query products including only the fashion category
+                    $filteredProducts = LocalProduct::where('lp_type', 'Fashion')->get();
+                    break;
+
+                case in_array('other', $selectedCategories):
+                    // If "Other" is checked, show categories that are not fashion, handicraft, and food
+                    $excludedCategories = ['Fashion', 'Handicraft', 'Food'];
+                    $filteredProducts = LocalProduct::whereNotIn('lp_type', $excludedCategories)->get();
+                    break;
+
+                default:
+                    // If none of the specific categories are selected, return an empty result
+                    $filteredProducts = collect();
+                    break;
             }
-            
-    
+
             // You can also return the filtered products as JSON if you prefer
             return response()->json(['html' => view('product.filter', ['products' => $filteredProducts])->render()]);
-    
+
         } catch (\Exception $e) {
             // Log the error
             \Log::error('Error in filterProducts: ' . $e->getMessage());
-    
+
             // Return a response with an error message (for debugging)
             return response()->json(['error' => $e->getMessage()], 500);
         }
     }
+
+
+
+
     
 
 }

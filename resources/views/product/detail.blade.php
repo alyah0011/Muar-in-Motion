@@ -57,6 +57,7 @@
         font-weight: 300;
         line-height: normal;
         letter-spacing: -1.2px;
+        margin-top: 30px;
     }
 
     .flex-container {
@@ -109,6 +110,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        width: 60%;
     }
 
     .ldesc {

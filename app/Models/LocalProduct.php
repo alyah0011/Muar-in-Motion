@@ -11,5 +11,5 @@ class LocalProduct extends Model
 
     protected $primaryKey = 'lp_id';
 
-    protected $fillable = ['lp_id', 'lp_name', 'lp_img', 'lp_type', 'lp_sdesc', 'lp_ldesc', 'lp_price', 'lp_contact', 'lp_website'];
+    protected $fillable = ['lp_id', 'lp_name', 'lp_img', 'lp_type', 'lp_sdesc', 'lp_ldesc', 'lp_price', 'lp_lat', 'lp_longi', 'lp_address', 'lp_contact', 'lp_website'];
 }

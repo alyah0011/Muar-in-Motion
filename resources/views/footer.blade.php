@@ -53,7 +53,36 @@
         margin-left: 10px;
     }
 
-    /* Add any additional styles as needed */
+    @media (max-width: 768px) {
+        .f-left, .f-right {
+            width: 80%; /* Set width to 100% for smaller screens */
+            margin-bottom: 10px; /* Adjust margin for smaller screens */
+        }
+
+        .f-left {
+            width: 40%;
+        }
+
+        .f-right {
+            width: 40%;
+        }
+        .partners img {
+            max-height: 100px; /* Adjust maximum width for partner logos on smaller screens */
+            width: auto;
+            margin: 0 2px; /* Adjust margin for smaller screens */
+        }
+
+        .partners {
+            flex-direction: column; /* Stack images vertically on smaller screens */
+        }
+
+        footer,
+        footer p,
+        footer a,
+        footer strong {
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
+    }
 
 </style>
 
@@ -68,7 +97,7 @@
 
                 <br><br>
 
-                <p>Contact us: hidayah_rahman@iium.edu.my</p>
+                <p>Contact us: mpmuar@johor.gov.my</p>
                 <!-- <p>Phone: 123-456-7890</p> -->
             </div>
             <div class="f-right">
